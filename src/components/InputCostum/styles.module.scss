@@ -5,7 +5,7 @@
   border: 1px solid $blueLight;
   border-radius: 6px;
   width: 100%;
-  @include contained(1, flex, row, space-around, center);
+  @include contained(1, flex, row, center, center);
   input{
     flex: 1;
     margin-left: 10px;

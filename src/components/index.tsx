@@ -10,6 +10,7 @@ import Tips from './Tips'
 import TipsCard from './TipsCard'
 import Sort from './Sort'
 import InputCostum from './InputCostum'
+import InfoCard from './InfoCard'
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   SearchWorkers,
   Sort,
   InputCostum,
+  InfoCard,
 }

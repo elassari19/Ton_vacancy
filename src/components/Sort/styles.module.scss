@@ -6,15 +6,15 @@
   border-radius: 6px;
   width: 100%;
   @include contained(1, flex, row, space-around, center);
-  input{
+  select{
     flex: 1;
-    margin-left: 10px;
-    outline: none;
-    font-size: $mdText;
-    border: none;
-    color: $blue;
-    &::placeholder{
-      color: $blueLight;
+    border: 0;
+    outline: 0;
+    color: $blueLight;
+    text-align: center;
+    option{
+      color: $blue;
+      padding: 5px 0;
     }
   }
 }
