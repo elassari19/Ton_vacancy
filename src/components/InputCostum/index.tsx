@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { FC, FormEvent } from 'react';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 interface Props {
   className?: string;

@@ -1,6 +1,6 @@
-import { search } from 'public';
 import React, { FC, FormEvent, ReactNode, useState } from 'react';
 import { InputCostum } from '..';
+import { search } from '../../../public';
 import styles from './styles.module.scss'
 
 interface Props {
