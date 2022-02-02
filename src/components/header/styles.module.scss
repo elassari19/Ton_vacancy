@@ -1,0 +1,19 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  @include contained(1, flex, row, space-between, center);
+}
+
+.menu {
+  padding: 5px;
+}
+
+.alignCenter {
+  align-items: center;
+  >div {
+    box-sizing: border-box;
+    padding: 0;
+  }
+}
+
+

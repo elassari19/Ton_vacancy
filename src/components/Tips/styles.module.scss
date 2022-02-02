@@ -1,0 +1,36 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  width: 114px;
+  height: 35px;
+  color: $green;
+  border-radius: 6px;
+  background-color: $greenLight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  font-weight: 400;
+}
+
+.xs{
+  font-size: $xsText;
+}
+
+.sm{
+  font-size: $smText;
+}
+
+.md{
+  font-size: $mdText;
+}
+
+.lg{
+  font-size: $lgText;
+}
+
+.xl{
+  font-size: $xlText;
+}
