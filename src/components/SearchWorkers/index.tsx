@@ -1,4 +1,4 @@
-import React, { FC, FormEvent, ReactNode, useState } from 'react';
+import React, { FC, FormEvent, memo, ReactNode, useState } from 'react';
 import { InputCostum } from '..';
 import { search } from '../../../public';
 import styles from './styles.module.scss'
@@ -20,4 +20,4 @@ const index: FC<Props> = ({ className, id }) => {
   </div>;
 };
 
-export default index;
+export default memo(index);

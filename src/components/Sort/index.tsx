@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import styles from './styles.module.scss'
 import {swap} from '../../../public'
 import Image from 'next/image';
@@ -18,4 +18,4 @@ const index: FC<Props> = ({ className, id}) => {
   </div>
 };
 
-export default index;
+export default memo(index);

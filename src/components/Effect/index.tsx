@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
 interface Props {
   className?: string;
@@ -17,4 +17,4 @@ const index: FC<Props> = ({ className, id, rotate, top, left, size, icon}) => {
   </div>;
 };
 
-export default index;
+export default memo(index);

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, memo, ReactNode } from 'react';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -13,4 +13,4 @@ const index: FC<Props> = ({children, className, id, onClick}) => {
   </div>;
 };
 
-export default index;
+export default memo(index);

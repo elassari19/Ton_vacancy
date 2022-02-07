@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { BtnPrimary } from '..';
 import { Logo, telegram, vector } from '../../../public';
@@ -47,7 +47,7 @@ const index: FC<Props> = ({ className, id}) => {
 
         <Col className={styles.center} style={{paddingTop: 15}} >
           <Image src={telegram}/>
-          <span className={styles.telegram}>Visit Telegram channel</span>
+          <span className={styles.telegram}>  Visit Telegram channel</span>
         </Col>
 
       </Row>
@@ -69,4 +69,4 @@ const index: FC<Props> = ({ className, id}) => {
   </div>;
 };
 
-export default index;
+export default memo(index);

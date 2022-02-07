@@ -1,4 +1,4 @@
-import React, { createElement, FC, ReactNode } from 'react';
+import React, { createElement, FC, memo, ReactNode } from 'react';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -25,4 +25,4 @@ const index: FC<Props> = ({children, className, size, tag, id, title, content}) 
   </div>;
 };
 
-export default index;
+export default memo(index);

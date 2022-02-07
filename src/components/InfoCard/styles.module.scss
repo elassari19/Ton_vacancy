@@ -1,5 +1,114 @@
 @import '../../styles/Home.module.scss';
 
 .container {
-  border: 1px solid #000;
+  max-height: 500px;
+  max-width: 400px;
+  flex: 1 350px;
+  justify-content: center;
+  padding: 15px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(122, 121, 121, 0.067), -1px -1px 5px rgba(129, 127, 127, 0.067);
+  border-radius: 15px;
+  div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.image{
+  text-align: center;
+  img{
+    border-radius: 50%;
+  }
+}
+
+.info {
+  height: 130px;
+}
+
+.head{
+  padding: 0;
+  >div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.underemployment {
+  @include contained(1, flex, row, space-around, center);
+  max-width: 220px;
+  font-size: .9rem;
+  font-weight: 600;
+  height: 35;
+  border: 1px solid $blueLight;
+  border-radius: 6px;
+  color: $blue;
+}
+
+.user {
+  @include contained(1, flex, row, space-between, center);
+  max-width: 220px;
+}
+
+.tips {
+  >div{
+    background-color: $green;
+    color: #fff;
+    border-radius: 20px;
+    width: auto;
+    padding: 3px 10px !important;
+    margin: 5px !important;
+    font-size: .8rem;
+  }
+}
+
+.crypto {
+  @include contained(auto, flex, row, space-around, center);
+  border-radius: 10px;
+  padding: 0px !important;
+  max-height: 64px;
+  >:first-child{
+    flex: 1;
+    text-align: center;
+  }
+  >:last-child{
+    flex: 5;
+  }
+  p{
+    margin: 0;
+    flex: 2;
+  }
+}
+
+.cryptoYes {
+  background-color: $greenLight;
+  >:first-child{
+    color: $greenDark;
+  }
+}
+
+.cryptoNo {
+  background-color: $redLight;
+  >:first-child{
+    color: $redDark;
+  }
+  p{
+    font-size: 14px;
+  }
+}
+
+.portfulio {
+  padding: 10px 0;
+  height: 120px;
+  align-items: center;
+  p{
+    color: $gray;
+    font-size: 14px;
+  }
+}
+
+.userContact{
+  @include contained(auto, flex, row, space-around, center);
+  place-self: end;
 }

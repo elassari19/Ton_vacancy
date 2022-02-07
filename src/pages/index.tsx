@@ -6,8 +6,9 @@ import {picture1, suitCase, tip01, tip02, tip03, tip04, personsWhite, picture2} 
 import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
 import { Col } from 'react-bootstrap'
+import { memo } from 'react'
 
-const Home: NextPage = () => {
+const index: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 
         {/* How to find really a good job? */}
           <Col md={6} sm={12}>
-            <Tips />
+            <Tips title='TIPS' style={{height: 35, width: 114}} />
             <TipsCard
               tag='h2'
               size='md'
@@ -56,7 +57,7 @@ const Home: NextPage = () => {
         <Section style={{background: '#0001'}}>
           <Image src={picture2} />
           <div>
-            <Tips />
+            <Tips title='TIPS' style={{height: 35, width: 114}} />
             <TipsCard
               tag='h2'
               size='md'
@@ -73,4 +74,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default memo(index);

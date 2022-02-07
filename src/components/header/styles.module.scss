@@ -4,16 +4,20 @@
   @include contained(1, flex, row, space-between, center);
 }
 
-.menu {
-  padding: 5px;
+.small {
+  padding: 10px 0;
+}
+
+.start {
+  @include contained(1, flex, row, flex-start, center);
 }
 
 .alignCenter {
-  align-items: center;
-  >div {
-    box-sizing: border-box;
-    padding: 0;
-  }
+  @include contained(1, flex, row, space-between, center);
+}
+
+.buttons {
+  @include contained(1, flex, row, flex-end, center);
 }
 
 

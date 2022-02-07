@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC, ReactNode } from 'react';
+import React, { CSSProperties, FC, memo, ReactNode } from 'react';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -7,12 +7,13 @@ interface Props {
   bg?: string;
   radius?: number;
   style?: CSSProperties;
+  title: string;
 }
 
-const index: FC<Props> = ({children, className, id, style, radius, bg}) => {
+const index: FC<Props> = ({title='TIPS', className, id, style, radius, bg}) => {
   return <div className={styles.container + ` ${className}`} id={id} style={{ ...style, backgroundColor: bg, borderRadius: radius}}>
-    TIPS
+    {title}
   </div>;
 };
 
-export default index;
+export default memo(index);

@@ -11,6 +11,9 @@ import TipsCard from './TipsCard'
 import Sort from './Sort'
 import InputCostum from './InputCostum'
 import InfoCard from './InfoCard'
+import Filter from './Filter'
+import InputRange from './InputRange'
+import EmploymentType from './EmploymentType'
 
 export {
   Header,
@@ -26,4 +29,7 @@ export {
   Sort,
   InputCostum,
   InfoCard,
+  Filter,
+  InputRange,
+  EmploymentType,
 }

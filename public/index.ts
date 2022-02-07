@@ -15,6 +15,11 @@ import vector from './vector.svg';
 import telegram from './telegram.svg';
 import swap from './swap.svg';
 import search from './search.svg';
+import profile from './profile.jpg';
+import notePencil from './notePencil.svg';
+import User from './User.svg';
+import Clock from './Clock.svg';
+import arrow from './arrow.svg';
 
 export {
   logo,
@@ -34,4 +39,9 @@ export {
   telegram,
   swap,
   search,
+  profile,
+  notePencil,
+  User,
+  Clock,
+  arrow,
 }

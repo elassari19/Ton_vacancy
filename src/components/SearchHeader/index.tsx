@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { BsArrowRightSquare} from 'react-icons/bs'
 import { MdClear} from 'react-icons/md'
 import styles from './styles.module.scss'
@@ -20,4 +20,4 @@ const index: FC<Props> = ({onClick}) => {
   );
 }
 
-export default index;
+export default memo(index);

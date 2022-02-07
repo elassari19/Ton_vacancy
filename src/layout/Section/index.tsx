@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC, ReactNode } from 'react';
+import React, { CSSProperties, FC, memo, ReactNode } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import styles from './styles.module.scss'
 
@@ -27,4 +27,4 @@ return <div className={styles.container + ` ${className}`} id={id} style={{...st
   </div>;
 };
 
-export default index;
+export default memo(index);

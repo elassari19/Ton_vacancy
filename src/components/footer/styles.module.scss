@@ -3,6 +3,7 @@
 .container {
   display: grid;
   padding: 30px;
+  cursor: pointer;
   .title{
     font-weight: bold;
     margin: 15px 0 5px 0;
@@ -16,9 +17,7 @@
     color: $blueDark;
   }
   .center{
-    @include contained(1, flex, row, center, center);
-    span{
-      cursor: pointer;
-    }
+    @include contained(1, flex, row, space-evenly, center);
+    cursor: pointer;
   }
 }

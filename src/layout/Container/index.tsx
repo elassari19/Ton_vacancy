@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, memo, ReactNode } from 'react';
 import { CSSProperties } from 'react';
 import styles from './styles.module.scss'
 
@@ -32,4 +32,4 @@ const index: FC<Props> = ({children, className, id, small, large, medium, xlarge
   </div>;
 };
 
-export default index;
+export default memo(index);

@@ -1,9 +1,9 @@
 @import '../../styles/Home.module.scss';
 
 .container {
-  padding: 5px 10px;
+  padding: 10px;
   border: 1px solid $blueLight;
-  border-radius: 6px;
+  border-radius: 15px;
   width: 100%;
   @include contained(1, flex, row, space-around, center);
   select{

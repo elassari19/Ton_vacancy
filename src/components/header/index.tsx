@@ -39,7 +39,7 @@ function index() {
     {/* nav for small screen (phone) */}
     <Container small >
 
-      <Col sm={{offset: 1, span: 10}}>
+      <Col xs={{offset: 1, span: 10}} className={styles.small}>
         <div id='header' className={styles.container}>
           <div onClick={handleDropMenu}>
           <AiOutlineMenu size={25}/>
@@ -59,25 +59,28 @@ function index() {
 
     {/* nav for meduim or greate screen */}
     <Container medium >
-      <Row className={styles.alignCenter}>
-        <Col sm={{offset: 1}} >
-          <Row className={styles.alignCenter}>
-            <Col sm={3} onClick={()=>router.push('/')}>
-                <Image src={Logo} />
-            </Col>
-            <Col  onClick={()=>router.push('/workers')}>
-              <BtnPrimary title='Соискатели' inIcon={persons} onClick={()=>router.push('/login')} />
-            </Col>
-            <Col  onClick={()=>router.push('/companies')}>
-              <BtnPrimary title='Работодатели' inIcon={Suitcase} onClick={()=>router.push('/login')} />
-            </Col>
-          </Row>
-        </Col>
-        <Col  sm={{offset: 1}} lg={{offset: 1}}>
+
+        <Col sm={{offset: 1, span: 10}} lg={{offset: 1, span: 10}} className={styles.alignCenter}>
+
+          <Col className={styles.start}>
+          <Col sm={3} onClick={()=>router.push('/')}>
+              <Image src={Logo} />
+          </Col>
+          <Col  onClick={()=>router.push('/workers')}>
+            <BtnPrimary title='Соискатели' inIcon={persons} onClick={()=>router.push('/login')} />
+          </Col>
+          <Col  onClick={()=>router.push('/companies')}>
+            <BtnPrimary title='Работодатели' inIcon={Suitcase} onClick={()=>router.push('/login')} />
+          </Col>
+          </Col>
+
+            <Col className={styles.buttons} >
               <BtnPrimary title='Log in' onClick={()=>router.push('/login')} white style={{width: 114}} />
               <BtnPrimary title='Sign up' onClick={()=>router.push('/suignup')} blueDark style={{width: 114}} />
+            </Col>
+
         </Col>
-      </Row>
+
     </Container>
 
   </>;

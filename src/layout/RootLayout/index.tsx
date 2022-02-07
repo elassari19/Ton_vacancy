@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, memo, ReactNode } from 'react';
 import { Effect, Footer, Header } from '../../components';
 import Work from '../../../public/Work.svg';
 import { Col } from 'react-bootstrap';
@@ -20,4 +20,4 @@ const index: FC<Props> = ({children}) => {
   </div>;
 };
 
-export default index;
+export default memo(index);

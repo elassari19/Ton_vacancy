@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { CSSProperties, FC, FormEvent, ReactNode } from 'react';
+import React, { CSSProperties, FC, FormEvent, memo, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -24,4 +24,4 @@ const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, plac
   </div>;
 };
 
-export default index;
+export default memo(index);

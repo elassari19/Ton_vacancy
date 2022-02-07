@@ -1,10 +1,13 @@
-import React, { FormEvent, useState } from 'react';
-import { Section } from '../layout';
-import { InfoCard, InputCostum, Sort } from '../components';
+import React, { FormEvent, forwardRef, memo, useState } from 'react';
+import { BtnPrimary, Filter, Heading, InfoCard, InputCostum, InputRange, Sort } from '../components';
 import Head from 'next/head';
 import styles from '../styles/workers.module.scss'
 import { search } from '../../public';
 import { Col, Row } from 'react-bootstrap';
+import { RiArrowDownSLine } from 'react-icons/ri';
+import Image from 'next/image';
+
+const item = ['','','','','','','','','','',''];
 
 function index() {
 
@@ -22,28 +25,38 @@ function index() {
     </Head>
     <div className={styles.container}>
 
-        <Row>
-        <Col sm={12} md={9}>
+      <Row>
+        <Col xs={{offset: 1, span: 10}} md={{offset: 0, span: 12}} lg={9}>
           <Row>
-            <Col sm={12} md={8}>
+
+            {/* search input */}
+            <Col sm={8} xs={12}>
               <InputCostum inIcon={search} placeholder='Search' value={text} onChange={handleChange} />
             </Col>
-            <Col sm={12} md={4}>
-            {/* <InputCostum id='sort' inIcon={search} placeholder='Standart sorting' value={text} onChange={handleChange} style={{fontSize: 14}}/> */}
-            <Sort />
+
+            {/* sort results */}
+            <Col sm={4} xs={12}>
+              <Sort />
             </Col>
           </Row>
-          <Row>
-            <InfoCard />
+
+          {/* card info */}
+          <Row className='mt-2'>
+            {
+              item.map((item,idx)=><InfoCard key={idx} />)
+            }
           </Row>
         </Col>
-        <Col sm={12}  md={3}>
-          filter
+
+        {/* filter redult */}
+        <Col sm={12} md={6} lg={3} className={styles.filter}>
+          <Filter />
         </Col>
-        </Row>
+
+      </Row>
 
     </div>
   </div>;
 }
 
-export default index;
+export default forwardRef(index);
