@@ -1,0 +1,58 @@
+@import '../../../styles/Home.module.scss';
+
+.container {
+  margin: auto;
+  padding: auto;
+}
+
+.brand div{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: $blueDark;
+  font-size: 5rem;
+  color: #fff4;
+  padding-right: 10%;
+  text-align: end;
+}
+
+.Image{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+
+.info {
+  margin-top: 160px;
+  place-items: flex-end;
+  .green{
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    border: 4px solid #fff;
+    z-index: 1;
+  }
+  .person{
+    place-items: flex-end;
+  }
+  .personRight{
+    place-items: flex-end;
+  }
+}
+
+.portfolio{
+  margin: 20px 0;
+  .text{
+    min-height: 50px;
+    display: flex;
+    place-items: flex-end;
+  }
+}

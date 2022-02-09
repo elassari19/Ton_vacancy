@@ -14,6 +14,9 @@ import InfoCard from './InfoCard'
 import Filter from './Filter'
 import InputRange from './InputRange'
 import EmploymentType from './EmploymentType'
+import Crypto from './Crypto'
+import Underemployment from './Underemployment'
+import YearsAndTime from './YearsAndTime'
 
 export {
   Header,
@@ -32,4 +35,7 @@ export {
   Filter,
   InputRange,
   EmploymentType,
+  Crypto,
+  Underemployment,
+  YearsAndTime
 }

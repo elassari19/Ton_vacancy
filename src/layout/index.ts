@@ -3,6 +3,7 @@ import Container from './Container'
 import Row from './Row'
 import Section from './Section'
 import MenuModel from './MenuModel'
+import Card from './Card'
 
 
 export {
@@ -11,6 +12,7 @@ export {
   Row,
   Section,
   MenuModel,
+  Card,
 }
 
 export default RootLayout;

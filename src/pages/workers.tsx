@@ -43,7 +43,7 @@ function index() {
           {/* card info */}
           <Row className='mt-2'>
             {
-              item.map((item,idx)=><InfoCard key={idx} />)
+              item.map((item,idx)=><InfoCard key={idx} id={`${idx}`} />)
             }
           </Row>
         </Col>

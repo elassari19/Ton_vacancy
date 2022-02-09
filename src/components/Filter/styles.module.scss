@@ -5,7 +5,7 @@
   border-radius: 15px;
   padding: 15px;
   height: 1115px;
-  @include contained(1, flex, column, space-between, start);
+  @include contained(1, flex, column, space-between, flex-start);
   .tech{
     background-color: #fff;
     padding: 15px 0;

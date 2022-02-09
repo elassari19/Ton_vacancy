@@ -14,25 +14,26 @@ interface Props {
   style?: CSSProperties;
 }
 
-const index: FC<Props> = ({ id, xs, sm, md, lg, tag, title, color, style}) => {
+const index: FC<Props> = ({ className, id, xs, sm, md, lg, tag, title, color, style}) => {
 
   const size = xs?'xs':sm?'sm':md?'md':lg?'lg':'xl'
+  const paragraph = title.split('</br>');
 
   return <div
-    className={styles.container} id={id} style={style}
+    className={styles.container} id={id} style={{...style, color: color}}
   >
     {
       tag=='h1'
-      ?<h1 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h1>
+      ?<h1 className={styles[size]+ ` ${className}`}>{title}</h1>
       :tag=='h2'
-      ?<h2 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h2>
+      ?<h2 className={styles[size]+ ` ${className}`}>{title}</h2>
       :tag=='h3'
-      ?<h3 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h3>
+      ?<h3 className={styles[size]+ ` ${className}`}>{title}</h3>
       :tag=='h4'
-      ?<h4 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h4>
+      ?<h4 className={styles[size]+ ` ${className}`}>{title}</h4>
       :tag=='h5'
-      ?<h5 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h5>
-      :<h6 className={styles[size]+ ` ${color && styles[color]}`}>{title}</h6>
+      ?<h5 className={styles[size]+ ` ${className}`}>{title}</h5>
+      :<h6 className={styles[size]+ ` ${className}`}>{title}</h6>
     }
   </div>;
 };

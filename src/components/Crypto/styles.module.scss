@@ -1,0 +1,60 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  margin: 0;
+  padding: 15px 0 !important;
+  max-width: 385px;
+  @include contained(auto, flex, row, space-around, center);
+  border-radius: 10px;
+  max-height: 64px;
+  >:first-child{
+    flex: 1;
+    text-align: center;
+  }
+  >:last-child{
+    flex: 5;
+    >div{
+      font-weight: 600;
+    }
+  }
+  p{
+    margin: 0;
+    flex: 2;
+  }}
+
+
+.crypto {
+  @include contained(auto, flex, row, space-around, center);
+  border-radius: 10px;
+  padding: 0px !important;
+  max-height: 64px;
+  >:first-child{
+    flex: 1;
+    text-align: center;
+  }
+  >:last-child{
+    flex: 5;
+  }
+  p{
+    margin: 0;
+    flex: 2;
+  }
+}
+
+
+.cryptoYes {
+  background-color: $greenLight;
+  >:first-child{
+    color: $greenDark;
+  }
+}
+
+.cryptoNo {
+  background-color: $redLight;
+  >:first-child{
+    color: $redDark;
+  }
+  p{
+    font-size: 14px;
+  }
+}

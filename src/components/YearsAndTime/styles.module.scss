@@ -1,0 +1,6 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  @include contained(1, flex, row, space-between, center);
+  max-width: 220px;
+}
