@@ -1,5 +1,5 @@
-import Header from './header'
-import Footer from './footer'
+import Header from './Header'
+import Footer from './Footer'
 import SearchHeader from './SearchHeader'
 import SearchWorkers from './SearchWorkers'
 import BtnPrimary from './BtnPrimary'
@@ -17,6 +17,7 @@ import EmploymentType from './EmploymentType'
 import Crypto from './Crypto'
 import Underemployment from './Underemployment'
 import YearsAndTime from './YearsAndTime'
+import Companies from './Companies'
 
 export {
   Header,
@@ -37,5 +38,6 @@ export {
   EmploymentType,
   Crypto,
   Underemployment,
-  YearsAndTime
+  YearsAndTime,
+  Companies,
 }

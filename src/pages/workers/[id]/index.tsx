@@ -14,9 +14,10 @@ interface Props {
 }
 
 const index: FC<Props> = ({person}) => {
+
   const { name, address: {city} } = person;
-  console.log(person);
   const route = useRouter();
+
   return <div className={styles.container}>
 
     <Row className={styles.brand} >
@@ -31,7 +32,7 @@ const index: FC<Props> = ({person}) => {
       <Col xs={12} md={7}>
         <Row className={styles.person}>
           {/* profile image */}
-          <Col xs={12} md={4} style={{position: 'relative'}}>
+          <Col xs={12} md={5} style={{position: 'relative'}}>
             <Image src={profile} className={styles.Image} width={245} height={245} />
             <div className={styles.green} />
           </Col>

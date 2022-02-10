@@ -1,0 +1,26 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  box-shadow: 1px 1px 10px #0001;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px ;
+}
+
+.tips{
+  font-size: .9rem;
+  font-weight: 400;
+  margin: 3px;
+  padding: 0 8px;
+  color: $green;
+}
+
+.flex{
+  @include contained(1, flex, row, space-around, center);
+  p{
+    margin: 0;
+  }
+  span{
+    margin: 0 10px 0 0;
+  }
+}

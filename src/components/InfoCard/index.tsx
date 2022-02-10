@@ -47,7 +47,7 @@ const index: FC<Props> = ({ className, id}) => {
 
       <Row className={styles.userContact}>
         <Col><BtnPrimary onClick={()=>route.push('/')} title='Send a message' blue className='p-2 m-1'/></Col>
-        <Col><BtnPrimary onClick={()=>route.push(`/details/${id}`)} title='Open profile' grayLight className='p-2 m-1'/></Col>
+        <Col><BtnPrimary onClick={()=>route.push(`/workers/${id}`)} title='Open profile' grayLight className='p-2 m-1'/></Col>
       </Row>
 
     </div>

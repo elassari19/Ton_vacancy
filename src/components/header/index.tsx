@@ -67,10 +67,10 @@ function index() {
               <Image src={Logo} />
           </Col>
           <Col  onClick={()=>router.push('/workers')}>
-            <BtnPrimary title='Соискатели' inIcon={persons} onClick={()=>router.push('/login')} />
+            <BtnPrimary title='Соискатели' inIcon={persons} />
           </Col>
           <Col  onClick={()=>router.push('/companies')}>
-            <BtnPrimary title='Работодатели' inIcon={Suitcase} onClick={()=>router.push('/login')} />
+            <BtnPrimary title='Работодатели' inIcon={Suitcase} />
           </Col>
           </Col>
 

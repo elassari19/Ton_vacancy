@@ -20,6 +20,7 @@ import notePencil from './notePencil.svg';
 import User from './User.svg';
 import Clock from './Clock.svg';
 import arrow from './arrow.svg';
+import market from './market.svg';
 
 export {
   logo,
@@ -44,4 +45,5 @@ export {
   User,
   Clock,
   arrow,
+  market,
 }
