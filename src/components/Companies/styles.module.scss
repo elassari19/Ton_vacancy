@@ -1,26 +1,52 @@
 @import '../../styles/Home.module.scss';
 
 .container{
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px ;
+  place-items: center;
+}
+
+.boxShadow{
   box-shadow: 1px 1px 10px #0001;
   border-radius: 15px;
   padding: 15px;
   margin: 10px ;
+  place-items: center;
+}
+
+.anchor{
+  @include contained(1,flex, row, center, center);
+  span{
+    margin: 0 5px;
+  }
+  color: $blue;
+}
+
+.title{
+  @include contained(1, flex, row, space-evenly, center);
+  margin: 0;
+  padding: 0;
 }
 
 .tips{
   font-size: .9rem;
   font-weight: 400;
   margin: 3px;
-  padding: 0 8px;
+  padding: 3px 5px;
   color: $green;
 }
 
-.flex{
-  @include contained(1, flex, row, space-around, center);
+.flexend{
+  @include contained(1, flex, row, space-between, flex-end);
   p{
     margin: 0;
+    font-size: 14px;
   }
   span{
     margin: 0 10px 0 0;
-  }
+  }}
+
+.flex{
+  @include contained(1, flex, row, space-around, flex-end);
 }

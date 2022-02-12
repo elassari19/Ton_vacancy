@@ -21,6 +21,7 @@ import User from './User.svg';
 import Clock from './Clock.svg';
 import arrow from './arrow.svg';
 import market from './market.svg';
+import browser from './browser.svg';
 
 export {
   logo,
@@ -46,4 +47,5 @@ export {
   Clock,
   arrow,
   market,
+  browser,
 }

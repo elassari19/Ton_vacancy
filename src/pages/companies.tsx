@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { FC, FormEvent, useState} from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { search } from '../../public';
+import { profile, search } from '../../public';
 import styles from '../styles/companies.module.scss';
 
 const item = ['','','','','','','','','','',''];
@@ -42,7 +42,17 @@ return <div className={styles.container}>
         {/* companies info */}
         <Row className='mt-2'>
             {
-              item.map((item,idx)=><Col xs={12} key={idx}><Companies onClick={()=>route.push(`/companies/${idx}`)} /></Col>)
+              item.map((item,idx)=><Col xs={12} key={idx}>
+                <Companies
+                  title='Amazon Inc.'
+                  desc='Pleased him another was settled for. Moreover end horrible endeavor entrance any families'
+                  onMarket='15'
+                  employees='1500'
+                  image={profile}
+                  shadow
+                  onClick={()=>route.push(`/companies/${idx}`)}
+                />
+              </Col>)
             }
         </Row>
       </Col>

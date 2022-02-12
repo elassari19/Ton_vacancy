@@ -5,3 +5,57 @@
   padding: auto;
 }
 
+.brand div{
+  position: absolute;
+  left: 0;
+  @include contained(1, flex, row, flex-end, center);
+  width: 100%;
+  height: 200px;
+  background-color: $blueDark;
+  font-size: 6rem;
+  color: #fff3;
+  font-weight: 600;
+  padding-right: 10%;
+}
+
+.anchor{
+  @include contained(1,flex, row, center, center);
+  span{
+    margin: 0 5px;
+  }
+  color: $blue;
+}
+
+.image{
+  border: 2px solid $blueLight !important;
+  border-radius: 15px;
+}
+
+.companies{
+  margin: 0;
+  padding: 0;
+  div{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.info {
+  margin-top: 152px;
+  place-items: flex-end;
+  .person{
+    place-items: flex-end;
+  }
+  .personRight{
+    place-items: flex-end;
+  }
+}
+
+.portfolio{
+  margin: 20px 0;
+  .text{
+    min-height: 50px;
+    display: flex;
+    place-items: flex-end;
+  }
+}
