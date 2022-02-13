@@ -18,6 +18,7 @@ import Crypto from './Crypto'
 import Underemployment from './Underemployment'
 import YearsAndTime from './YearsAndTime'
 import Companies from './Companies'
+import Sevices from './Sevices'
 
 export {
   Header,
@@ -40,4 +41,5 @@ export {
   Underemployment,
   YearsAndTime,
   Companies,
+  Sevices,
 }

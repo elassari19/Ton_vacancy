@@ -3,8 +3,8 @@ import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
 import styles from './styles.module.scss';
-import {browser, market, persons, profile} from '../../../../public';
-import { BtnPrimary, Companies, Crypto, Heading, Tips, Underemployment, YearsAndTime } from 'components';
+import {browser, celebration, Clock, dollar, gift, heart, market, persons, profile, Tag} from '../../../../public';
+import { BtnPrimary, Companies, Crypto, Heading, Sevices, Tips, Underemployment, YearsAndTime } from 'components';
 import { useRouter } from 'next/router';
 import { Card } from '../../../layout'
 import { color } from 'theme';
@@ -20,16 +20,20 @@ const index: FC<Props> = ({person}) => {
 
   return <div className={styles.container}>
 
+    {/* TON VACANCY brand */}
     <Row className={styles.brand} >
       <Col >
         TON VACANCY
       </Col>
     </Row>
 
-    <Row >
+    {/* companie informations */}
+    <Row className={styles.info}>
 
-      <Col xs={12} md={8}>
-        <Row className={styles.info}>
+      <Col xs={12} md={7}>
+        <Row>
+
+          {/* companie image and url */}
         <Col xs={12} md={4}>
           <Image src={profile} className={styles.image} />
           <Row>
@@ -42,6 +46,7 @@ const index: FC<Props> = ({person}) => {
           </Row>
         </Col>
 
+        {/* companie description */}
         <Col xs={12} md={8} className={styles.companies}>
           <Companies
             title='Amazon Inc.'
@@ -54,14 +59,17 @@ const index: FC<Props> = ({person}) => {
         </Row>
       </Col>
 
-      <Col xs={12} md={4}>
-        sfsfd
+      {/* companie sevices */}
+      <Col xs={12} md={5}>
+        <Sevices />
       </Col>
 
     </Row>
 
-    <Row className={styles.portfolio }>
+    {/* section of vacancies */}
+    <Row className={styles.vacancies }>
 
+      <h3 className='mt-4 mb-3'>Vacancies</h3>
     </Row>
   </div>;
 };

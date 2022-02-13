@@ -22,6 +22,7 @@
   @include contained(1,flex, row, center, center);
   span{
     margin: 0 5px;
+    font-weight: 500;
   }
   color: $blue;
 }
@@ -31,18 +32,9 @@
   border-radius: 15px;
 }
 
-.companies{
-  margin: 0;
-  padding: 0;
-  div{
-    margin: 0;
-    padding: 0;
-  }
-}
-
 .info {
-  margin-top: 152px;
-  place-items: flex-end;
+  margin-top: 172px;
+  @include contained(1, flex, row, center, flex-end);
   .person{
     place-items: flex-end;
   }
@@ -51,8 +43,39 @@
   }
 }
 
-.portfolio{
-  margin: 20px 0;
+.companies{
+  margin: 20px 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  p{
+    font-size: 14px;
+  }
+  div{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sevices{
+  padding: 15px;
+  margin: 0 0 0px 0;
+  span{
+    margin: 0 0 0 5px;
+    font-weight: bold;
+  }
+>div{
+    >div{
+      @include contained(1, flex, row, space-evenly, center);
+      margin: 5px;
+    }
+  }
+}
+
+.vacancies{
+  h3{
+    color: $blue;
+  }
   .text{
     min-height: 50px;
     display: flex;

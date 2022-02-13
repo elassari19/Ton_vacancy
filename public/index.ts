@@ -22,6 +22,11 @@ import Clock from './Clock.svg';
 import arrow from './arrow.svg';
 import market from './market.svg';
 import browser from './browser.svg';
+import celebration from './celebration.svg';
+import dollar from './dollar.svg';
+import gift from './gift.svg';
+import heart from './heart.svg';
+import Tag from './Tag.svg';
 
 export {
   logo,
@@ -48,4 +53,9 @@ export {
   arrow,
   market,
   browser,
+  celebration,
+  dollar,
+  gift,
+  heart,
+  Tag,
 }

@@ -14,10 +14,10 @@ interface Props {
   lg?: ColSpec;
 }
 
-const index: FC<Props> = ({children, shadow, id, xs, sm, md, lg}) => {
+const index: FC<Props> = ({children, className, shadow, id, xs, sm, md, lg}) => {
   return <Col
     id={id} xs={xs} sm={sm} md={md} lg={lg}
-    className={styles.container + ` ${shadow ? styles.shadow: null}`}
+    className={styles.container + ` ${shadow ? styles.shadow: null} ${className}`}
   >
     {children}
   </Col>;
