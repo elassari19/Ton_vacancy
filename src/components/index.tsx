@@ -20,6 +20,7 @@ import YearsAndTime from './YearsAndTime'
 import Companies from './Companies'
 import Sevices from './Sevices'
 import Vacancy from './Vacancy'
+import Pagination from './Pagination'
 
 export {
   Header,
@@ -43,5 +44,6 @@ export {
   YearsAndTime,
   Companies,
   Sevices,
-  Vacancy
+  Vacancy,
+  Pagination
 }

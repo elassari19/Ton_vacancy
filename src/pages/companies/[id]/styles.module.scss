@@ -82,3 +82,30 @@
     place-items: flex-end;
   }
 }
+
+.pagination{
+  margin: 15px 0;
+  @include contained(1,flex,row, flex-start,center);
+  ul{
+    margin: 0;
+    li{
+      padding: 0 5px;
+    }
+    a{
+      border: 0;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+  }
+  >div:last-child{
+    @include contained(1,flex,row, flex-start,center);
+  }
+}
+.flex{
+  div{
+    padding: 0;
+    div span{
+      margin: 0;
+    }
+  }
+}
