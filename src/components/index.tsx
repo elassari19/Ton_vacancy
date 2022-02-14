@@ -19,6 +19,7 @@ import Underemployment from './Underemployment'
 import YearsAndTime from './YearsAndTime'
 import Companies from './Companies'
 import Sevices from './Sevices'
+import Vacancy from './Vacancy'
 
 export {
   Header,
@@ -42,4 +43,5 @@ export {
   YearsAndTime,
   Companies,
   Sevices,
+  Vacancy
 }

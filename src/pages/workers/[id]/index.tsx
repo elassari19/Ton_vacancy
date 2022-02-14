@@ -15,7 +15,7 @@ interface Props {
 
 const index: FC<Props> = ({person}) => {
 
-  const { name, address: {city} } = person;
+  const { name, address } = person;
   const route = useRouter();
 
   return <div className={styles.container}>
@@ -61,7 +61,7 @@ const index: FC<Props> = ({person}) => {
         <Card shadow >
           <Heading tag='h3' color={color.blueDark}  className='fs-3' title='Portfolio' />
           <Heading tag='p' title={name} className='fs-5 fw-normal' />
-          <Heading tag='p' title={city} className='fs-5 fw-normal' />
+          <Heading tag='p' title={address} className='fs-5 fw-normal' />
           <Heading tag='p' title='RESEARCH INTERESTS' className='fs-4 fw-bold' />
           <Heading tag='p' title='Hispanic Literature, Latin American Literature, Peninsular Literature' className={styles. text +' fs-5 fw-normal'} />
           <Heading tag='p' title='EDUCATION' className='fs-4 fw-bold' />

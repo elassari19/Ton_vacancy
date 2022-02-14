@@ -1,0 +1,50 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  margin: 10px 0;
+  div{
+    padding: 0;
+  }
+  >div{
+    padding: 15px 30px;
+    >div{
+      margin: 10px 0;
+    }
+  }
+}
+
+.item{
+  @include contained(1, flex, row, flex, center);
+  padding: 0;
+  font-size: 15px;
+  color: $gray;
+}
+
+.featured{
+  background-color: $redLight;
+  color: $red;
+  flex: auto;
+  font-size: 14px;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.desc{
+  font-size: 15px;
+  color: $gray;
+}
+
+.price{
+  @include contained(1, flex, row, flex-start, center);
+  >div{
+    padding: 0;
+  }
+  >:first-child{
+    font-size: 1.5rem;
+    color: $blue;
+    font-weight: bold
+  }
+}

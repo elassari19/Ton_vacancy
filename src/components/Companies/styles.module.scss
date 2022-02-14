@@ -24,9 +24,12 @@
 }
 
 .title{
-  @include contained(1, flex, row, space-evenly, center);
-  margin: 0;
-  padding: 0;
+  padding: 0 0 0 15px;
+  @include contained(1, flex, row, flex-start, center);
+  >div{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .tips{
@@ -48,5 +51,8 @@
   }}
 
 .flex{
-  @include contained(1, flex, row, space-around, flex-end);
+  @include contained(1, flex, row, flex-start, flex-end);
+  p{
+    margin: 0 0 0 10px;
+  }
 }

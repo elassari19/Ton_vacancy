@@ -17,7 +17,6 @@ interface Props {
 const index: FC<Props> = ({ className, id, xs, sm, md, lg, tag, title, color, style}) => {
 
   const size = xs?'xs':sm?'sm':md?'md':lg?'lg':'xl'
-  const paragraph = title.split('</br>');
 
   return <div
     className={styles.container} id={id} style={{...style, color: color}}

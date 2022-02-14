@@ -47,8 +47,8 @@ const index: FC<Props> = ({ className, id, onClick, desc, link, employees, onMar
     <Col xs={12} md={image ? 9 : 12} className={className}>
       
       <Row className={styles.title}>
-        <Col><h3 >{title}</h3></Col>
-        <Col><Tips title='10 000 open vacany' className={styles.tips} /></Col>
+        <Col xs={6} lg={4}><h3>{title}</h3></Col>
+        <Col xs={6} lg={4}><Tips title='10 000 open vacany' className={styles.tips} /></Col>
       </Row>
       
       <Row>

@@ -27,6 +27,8 @@ import dollar from './dollar.svg';
 import gift from './gift.svg';
 import heart from './heart.svg';
 import Tag from './Tag.svg';
+import fire from './fire.svg';
+import location from './location.svg';
 
 export {
   logo,
@@ -58,4 +60,6 @@ export {
   gift,
   heart,
   Tag,
+  fire,
+  location,
 }

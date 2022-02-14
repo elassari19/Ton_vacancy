@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
 import styles from './styles.module.scss';
 import {browser, celebration, Clock, dollar, gift, heart, market, persons, profile, Tag} from '../../../../public';
-import { BtnPrimary, Companies, Crypto, Heading, Sevices, Tips, Underemployment, YearsAndTime } from 'components';
+import { BtnPrimary, Companies, Crypto, Heading, Sevices, Tips, Underemployment, Vacancy, YearsAndTime } from 'components';
 import { useRouter } from 'next/router';
 import { Card } from '../../../layout'
 import { color } from 'theme';
@@ -30,11 +30,11 @@ const index: FC<Props> = ({person}) => {
     {/* companie informations */}
     <Row className={styles.info}>
 
-      <Col xs={12} md={7}>
+      <Col xs={12} lg={7}>
         <Row>
 
           {/* companie image and url */}
-        <Col xs={12} md={4}>
+        <Col xs={6}  lg={4}>
           <Image src={profile} className={styles.image} />
           <Row>
             <Link href={'google.com'}>
@@ -60,7 +60,7 @@ const index: FC<Props> = ({person}) => {
       </Col>
 
       {/* companie sevices */}
-      <Col xs={12} md={5}>
+      <Col xs={12} lg={5} className='my-md-4 my-sm-5'>
         <Sevices />
       </Col>
 
@@ -68,8 +68,14 @@ const index: FC<Props> = ({person}) => {
 
     {/* section of vacancies */}
     <Row className={styles.vacancies }>
+      <Col xs={12} lg={8}>
 
-      <h3 className='mt-4 mb-3'>Vacancies</h3>
+        <h3 className='mt-4 mb-3'>Vacancies</h3>
+
+        <Vacancy />
+        <Vacancy />
+        <Vacancy />
+      </Col>
     </Row>
   </div>;
 };
