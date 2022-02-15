@@ -3,8 +3,8 @@
 .container{
   @include contained(1,flex,row,flex-start,center);
   >div{
-    margin: 0 5px;
-    padding: 5px 13px;
+    margin: 0 3px;
+    padding: 5px 15px !important;
     border-radius: 5px;
     font-weight: 500;
     color: $blue;
@@ -18,7 +18,7 @@
 .active{
   background-color: $blue;
   color: #fff !important;
-  padding: 5px 10px;
+  padding: 5px 10px !important;
   &:hover{
     cursor: auto !important;
     background-color: $blue !important;
@@ -30,8 +30,12 @@
   font-weight: 600 !important;
   color: $gray !important;
   margin-bottom: 15px !important;
+  padding: 5px 0 !important;
   line-height: 10% !important;
   cursor: auto !important;
+  &:hover{
+    background-color: inherit !important;
+  }
 }
 
 .disabel{

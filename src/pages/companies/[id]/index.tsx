@@ -102,18 +102,14 @@ const index: FC<Props> = ({person}) => {
 
     {/* pagination */}
     <Row className={styles.pagination}>
-      <Col lg={{offset:0, span: 2}} xs={{offset: 3, span: 6}}> <BtnPrimary title='Load more' blue /> </Col>
 
-      <Col xs={12} lg={6} className={styles.flex}>
-        {/* <Col xs={2} md={1}>
-          <BtnPrimary title='Previous' style={{color: color.gray, fontWeight: '400'}} onClick={previous} />
-        </Col> */}
-          {/* <Pagination >{items}</Pagination> */}
+        <Col lg={{offset:0, span: 2}} xs={{offset: 3, span: 6}}> <BtnPrimary title='Load more' blue /> </Col>
+
+        <Col xs={12} lg={6} className={styles.flex}>
+
           <Pagination length={15} active={active} setActive={setActive} />
-        {/* <Col xs={2} md={1}>
-          <BtnPrimary title='Next' style={{color: color.gray, fontWeight: '400'}} onClick={next} />
-        </Col> */}
-      </Col>
+
+        </Col>
 
     </Row>
   </div>;

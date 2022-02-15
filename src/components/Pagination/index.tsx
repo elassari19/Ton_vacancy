@@ -24,7 +24,7 @@ const index: FC<Props> = ({ className, id, length, active, setActive}) => {
         {number}
       </div>
       :number == active -2 || number == active + 2
-      ?<div><div key={number} className={styles.dots}>...</div></div>
+      ?<div key={number} className={styles.dots}><div>...</div></div>
       :null,
     );
   }
