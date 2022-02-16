@@ -10,6 +10,7 @@ import tip01 from './tip01.svg';
 import tip02 from './tip02.svg';
 import tip03 from './tip03.svg';
 import tip04 from './tip04.svg';
+import tip05 from './tip05.svg';
 import work from './Work.svg';
 import vector from './vector.svg';
 import telegram from './telegram.svg';
@@ -42,6 +43,7 @@ export {
   tip02,
   tip03,
   tip04,
+  tip05,
   work,
   picture2,
   vector,

@@ -1,0 +1,15 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.vacancy{
+  :first-child{
+    color: $blueDark;
+  }
+}

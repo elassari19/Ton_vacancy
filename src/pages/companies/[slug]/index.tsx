@@ -1,44 +1,26 @@
-import React, { FC, memo, useState } from 'react';
+import React, { FC, memo, useCallback, useState } from 'react';
 // import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { Col,  Row } from 'react-bootstrap';
 import styles from './styles.module.scss';
 import {browser, profile} from '../../../../public';
-import { BtnPrimary, Companies, Pagination, Sevices, Vacancy } from 'components';
-import { useRouter } from 'next/router';
-import { color } from 'theme';
+import { BtnPrimary, Companies, Pagination, Sevices, Vacancy, NoVacancy } from 'components';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface Props {
-  person: any;
+  vacancy: any;
 }
 
-const index: FC<Props> = ({person}) => {
+const index: FC<Props> = ({vacancy}) => {
+
+  const [active, setActive] = useState<number>(8);
+  // this method return the items (vacany) whish must be display in this page considered by number of page
+  const item = Array(45).fill('').map(
+    (_,idx)=> (idx>=(active-1)*3&&idx<=(active-1)*3+2) ? <Vacancy key={idx} id={idx} />: null
+  );
 
   const route = useRouter();
-  const [active, setActive] = useState<number>(8);
-
-  // let items = [];
-  // let len = 15
-  // for (let number = 1; number <= len; number++) {
-  //   items.push(
-  //     number < 2 || number > len - 1 || (number > active - 2 && number < active + 2)
-  //     ?<Pagination.Item key={number} active={number === active} onClick={()=>setActive(number)} className={number == active ? styles.active : ''} >
-  //       {number}
-  //     </Pagination.Item>
-  //     :number == active -2 || number == active + 2
-  //     ?<Pagination.Ellipsis />
-  //     :null,
-  //   );
-  // }
-
-  // const previous = () => {
-  //   setActive(active<=1?1:active-1)
-  // }
-
-  // const next = () => {
-  //   setActive(active>=items.length?items.length:active+1)
-  // }
 
   return <div className={styles.container}>
 
@@ -59,7 +41,7 @@ const index: FC<Props> = ({person}) => {
         <Col xs={6}  lg={4}>
           <Image src={profile} className={styles.image} />
           <Row>
-            <Link href={'google.com'}>
+            <Link href={'https://www.google.com'}>
               <a className={styles.anchor}>
                 <Image src={browser}/>
                 <span>Visit website</span>
@@ -88,30 +70,38 @@ const index: FC<Props> = ({person}) => {
 
     </Row>
 
-    {/* section of vacancies */}
-    <Row className={styles.vacancies }>
-      <Col xs={12} lg={8}>
+    {
+      vacancy!=true
+      ?<>
+        {/* section of vacancies */}
+        <Row className={styles.vacancies }>
+          <Col xs={12} lg={8}>
 
-        <h3 className='mt-4 mb-3'>Vacancies</h3>
+            <h3 className='mt-4 mb-3'>Vacancies</h3>
 
-        <Vacancy />
-        <Vacancy />
-        <Vacancy />
-      </Col>
-    </Row>
+            {
+              item.map((item,idx)=>item&&item)
+            }
+    
+          </Col>
+        </Row>
+    
+        {/* pagination */}
+        <Row className={styles.pagination}>
 
-    {/* pagination */}
-    <Row className={styles.pagination}>
+            <Col lg={{offset:0, span: 2}} xs={{offset: 3, span: 6}}> <BtnPrimary title='Load more' blue /> </Col>
 
-        <Col lg={{offset:0, span: 2}} xs={{offset: 3, span: 6}}> <BtnPrimary title='Load more' blue /> </Col>
+            <Col xs={12} lg={6} className={styles.flex}>
 
-        <Col xs={12} lg={6} className={styles.flex}>
+              <Pagination length={Math.ceil(15)} active={active} setActive={setActive} />
 
-          <Pagination length={15} active={active} setActive={setActive} />
+            </Col>
 
-        </Col>
+        </Row>
+      </>
+      :<NoVacancy />
+    }
 
-    </Row>
   </div>;
 };
 

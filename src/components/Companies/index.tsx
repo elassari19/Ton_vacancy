@@ -33,7 +33,7 @@ const index: FC<Props> = ({ className, id, onClick, desc, link, employees, onMar
           {
             link 
             && <Row>
-                <Link href={'google.com'}>
+                <Link href={'https://www.google.com'}>
                 <a className={styles.anchor}>
                   <Image src={browser}/>
                   <span>Visit website</span>

@@ -1,8 +1,8 @@
 import React, { FormEvent, forwardRef, memo, useState } from 'react';
-import { BtnPrimary, Filter, Heading, InfoCard, InputCostum, InputRange, Sort } from '../components';
+import { BtnPrimary, Filter, Heading, InfoCard, InputCostum, InputRange, Sort } from '../../components';
 import Head from 'next/head';
-import styles from '../styles/workers.module.scss'
-import { search } from '../../public';
+import styles from './styles.module.scss'
+import { search } from '../../../public';
 import { Col, Row } from 'react-bootstrap';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import Image from 'next/image';

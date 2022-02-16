@@ -1,5 +1,6 @@
 import { BtnPrimary } from 'components';
 import { Card } from 'layout';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { fire, location } from '../../../public';
@@ -7,11 +8,19 @@ import styles from './styles.module.scss'
 
 interface Props {
   className?: string;
-  id?: string;
+  id?: number;
 }
 
 const index: FC<Props> = ({ className, id}) => {
-  return <div className={styles.container + ` ${className}`} id={id}>
+
+  const route = useRouter();
+  // console.log(route.query)
+
+return <div
+          className={styles.container + ` ${className}`}
+          id={id?.toString()}
+          onClick={()=>route.push(`/companies/${id}/vacancy`)}
+        >
     <Card shadow >
 
       <Row className={styles.item}>

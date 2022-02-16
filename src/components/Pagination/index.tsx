@@ -13,6 +13,7 @@ interface Props {
 const index: FC<Props> = ({ className, id, length, active, setActive}) => {
 
   let page = [];
+
   for (let number = 1; number <= length; number++) {
     page.push(
       number < 2 || number > length - 1 || (number > active - 2 && number < active + 2)
@@ -39,7 +40,7 @@ const index: FC<Props> = ({ className, id, length, active, setActive}) => {
 return <div className={styles.container + ` ${className}`} id={id}>
     <div onClick={previous} className={ active==1 ? styles.disabel : '' }><span>Previous</span></div>
     {
-      page.map((item)=><>{item}</>)
+      page.map((item,idx)=>item&&<div key={idx}>{item}</div>)
     }
     <div onClick={next}className={ active==length ? styles.disabel : '' }><span>Next</span></div>
   </div>;

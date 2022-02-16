@@ -21,6 +21,7 @@ import Companies from './Companies'
 import Sevices from './Sevices'
 import Vacancy from './Vacancy'
 import Pagination from './Pagination'
+import NoVacancy from './NoVacancy'
 
 export {
   Header,
@@ -45,5 +46,6 @@ export {
   Companies,
   Sevices,
   Vacancy,
-  Pagination
+  Pagination,
+  NoVacancy,
 }

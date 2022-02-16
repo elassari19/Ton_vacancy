@@ -50,7 +50,7 @@ const index: FC<Props> = ({ className, id}) => {
       </Card>
       <Row>
 
-      <Link href={'google.com'}>
+      <Link href={'https://www.google.com'}>
         <a className={styles.anchor}>
           <Image src={browser}/>
           <span>Visit website</span>

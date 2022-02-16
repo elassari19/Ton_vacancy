@@ -3,8 +3,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { FC, FormEvent, useState} from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { profile, search } from '../../public';
-import styles from '../styles/companies.module.scss';
+import { profile, search } from '../../../public';
+import styles from './styles.module.scss';
 
 const item = ['','','','','','','','','','',''];
 
