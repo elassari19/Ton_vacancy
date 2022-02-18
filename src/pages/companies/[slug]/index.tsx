@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Col,  Row } from 'react-bootstrap';
 import styles from './styles.module.scss';
 import {browser, profile} from '../../../../public';
-import { BtnPrimary, Companies, Pagination, Sevices, Vacancy, NoVacancy } from 'components';
+import { BtnPrimary, Companies, Pagination, Sevices, Vacancy, NoVacancy } from '../../../components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -17,7 +17,7 @@ const index: FC<Props> = ({vacancy}) => {
   const [active, setActive] = useState<number>(8);
   // this method return the items (vacany) whish must be display in this page considered by number of page
   const item = Array(45).fill('').map(
-    (_,idx)=> (idx>=(active-1)*3&&idx<=(active-1)*3+2) ? <Vacancy key={idx} id={idx} />: null
+    (_,idx)=> (idx>=(active-1)*3&&idx<=(active-1)*3+2) ? <Vacancy key={idx} id={idx} shadow />: null
   );
 
   const route = useRouter();

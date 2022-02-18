@@ -7,8 +7,12 @@ import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
 import { Col } from 'react-bootstrap'
 import { memo } from 'react'
+import { useRouter } from 'next/router'
 
 const index: NextPage = () => {
+
+  const route = useRouter()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -27,8 +31,8 @@ const index: NextPage = () => {
             title='Professional applicants in various fields'
             content='TON work allows you to find the most effective and top employees from all over the world'
           >
-              <BtnPrimary blueDark title='I am employer' inIcon={suitCase} style={{width: '45%', padding: '12px'}} />
-              <BtnPrimary greenDark title='I am employer' inIcon={personsWhite} style={{width: '45%', padding: '12px'}} />
+              <BtnPrimary blueDark title='I am employer' inIcon={suitCase} style={{width: '45%', padding: '12px'}} onClick={()=>route.push('/workers')} />
+              <BtnPrimary greenDark title='I am applicant' inIcon={personsWhite} style={{width: '45%', padding: '12px'}} onClick={()=>route.push('/companies')} />
           </TipsCard>
 
             <Image src={picture1} />
