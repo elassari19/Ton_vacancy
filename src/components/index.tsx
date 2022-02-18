@@ -22,6 +22,7 @@ import Sevices from './Sevices'
 import Vacancy from './Vacancy'
 import Pagination from './Pagination'
 import NoVacancy from './NoVacancy'
+import Modal from './Modal'
 
 export {
   Header,
@@ -48,4 +49,5 @@ export {
   Vacancy,
   Pagination,
   NoVacancy,
+  Modal,
 }

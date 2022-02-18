@@ -1,6 +1,10 @@
 @import '../../styles/Home.module.scss';
 
 .container {
+  margin: 10px 0;
+}
+
+.header{
   @include contained(1, flex, row, space-between, center);
 }
 

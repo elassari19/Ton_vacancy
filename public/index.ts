@@ -30,6 +30,8 @@ import heart from './heart.svg';
 import Tag from './Tag.svg';
 import fire from './fire.svg';
 import location from './location.svg';
+import logout from './logout.svg';
+import x from './x.svg';
 
 export {
   logo,
@@ -64,4 +66,6 @@ export {
   Tag,
   fire,
   location,
+  logout,
+  x,
 }
