@@ -1,0 +1,25 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  margin: auto;
+  a{
+    @include contained(1,flex, row, center, center);
+    span{
+      margin: 0 5px;
+    }
+    color: $blue;
+  }
+}
+
+.image{
+  border: 2px solid $blueLight !important;
+  border-radius: 1rem;
+}
+
+.anchor{
+  @include contained(1,flex, row, center, center);
+  span{
+    margin: 0 5px;
+  }
+  color: $blue;
+}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { CSSProperties, FC, memo } from 'react';
 import styles from './styles.module.scss';
 
+
 interface Props {
   id?: string;
   className?: string;
@@ -13,7 +14,7 @@ interface Props {
   greenDark?: boolean;
   grayLight?: boolean;
   title: string;
-  onClick?: () => void
+  onClick?: (bool?: any) => void;
   inIcon?: string;
   endIcon?: string;
   style?: CSSProperties;

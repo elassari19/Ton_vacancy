@@ -23,6 +23,9 @@ import Vacancy from './Vacancy'
 import Pagination from './Pagination'
 import NoVacancy from './NoVacancy'
 import Modal from './Modal'
+import ImageProfile from './ImageProfile'
+import EditorInput from './EditorInput'
+import Input from './Input'
 
 export {
   Header,
@@ -50,4 +53,7 @@ export {
   Pagination,
   NoVacancy,
   Modal,
+  ImageProfile,
+  EditorInput,
+  Input,
 }
