@@ -1,4 +1,4 @@
-import React, { FormEvent, forwardRef, memo, useState } from 'react';
+import React, { FormEvent, memo, useState } from 'react';
 import { BtnPrimary, Filter, Heading, InfoCard, InputCostum, InputRange, Sort } from '../../components';
 import Head from 'next/head';
 import styles from './styles.module.scss'
@@ -59,4 +59,4 @@ function index() {
   </div>;
 }
 
-export default forwardRef(index);
+export default memo(index);

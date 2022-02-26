@@ -20,7 +20,7 @@ const schema = yup.object({
   name: yup.string().required().min(5),
   category: yup.string().notRequired(),
   description: yup.string().notRequired(),
-  phone: yup.number().positive().integer().notRequired(),
+  phone: yup.number().positive().integer().min(8).notRequired(),
   email: yup.string().email().notRequired(),
   telegram: yup.string().notRequired(),
   city: yup.string().notRequired(),
@@ -85,21 +85,22 @@ const index: FC<Props> = ({className, id}) => {
           </Col>
           <Col lg={9} className={styles.info}>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <Input register={register} label='name' error={errors.name} />
-              <Input register={register} label='category' error={errors.category} />
-              <Input register={register} label='description' error={errors.description} />
+              <Input register={register} label='name' error={errors.name} placeholder={'Name of company'} />
+              <Input register={register} label='category' error={errors.category} placeholder={'Category of company'} />
+              <Input register={register} label='description' error={errors.description} type='textarea' placeholder={'Description of company '} className={styles.textarea} />
               <h4>Contacts</h4>
-              <Input register={register} label='phone' error={errors.phone} />
-              <Input register={register} label='email' error={errors.email} />
+              <Input register={register} label='phone' error={errors.phone} placeholder={'Number of phone'} />
+              <Input register={register} label='email' error={errors.email} placeholder={'Email of Comapany'} />
               <h4>Timeline</h4>
-              <Input register={register} label='city' error={errors.city} />
               <label htmlFor="city">
-              Select city
-              <TimezoneSelect
-                value={value.city}
-                onChange={e=>setValue(prev=>({...prev, city: e.value}))}
-                className={styles.timezone}
-              />
+                Select city
+                <TimezoneSelect
+                  id='city'
+                  value={value.city}
+                  onChange={e=>setValue(prev=>({...prev, city: e.value}))}
+                  className={styles.timezone}
+                />
+              </label>
 
             <div className={styles.benfits}>
               <h4>Benfits</h4><span>(optional)</span>
@@ -129,10 +130,9 @@ const index: FC<Props> = ({className, id}) => {
             </Col>
 
             <Col xs={12} md={4}>
-              <input type="submit" />
-              {/* <BtnPrimary title='Save changings' blue onClick={()=>console.log(value)} style={{padding: 10, marginTop: 15}} /> */}
+              <InputCostum value='Save changings' type='submit' className={styles.submit} />
+              {/* <input type="submit" /> */}
             </Col>
-            </label>
             </form>
 
             {/* <label htmlFor="name">

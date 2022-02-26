@@ -18,10 +18,22 @@ interface Props {
 
 const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type, placeholder, value, onChange, style}) => {
   return <div className={styles.container + ` ${className}`} id={id}>
+
     {inIcon && <Image src={inIcon} width={size||22} height={size||22} />}
-    <input name={id} id={id} type={type|| 'text'} placeholder={placeholder} value={value} onChange={onChange} style={style} />
-      {children}
+
+    <input 
+      name={id} id={id} 
+      type={type|| 'text'} 
+      placeholder={placeholder} 
+      value={value} 
+      onChange={onChange} 
+      style={style} 
+    />
+
+    {children}
+
     {endIcon && <Image src={endIcon} />}
+
   </div>;
 };
 

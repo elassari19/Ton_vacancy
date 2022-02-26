@@ -16,7 +16,7 @@
   }
 }
 
-.textarea{
+.textarea input{
   display: block;
   width: 100%;
   outline: 0;
@@ -63,5 +63,14 @@
       margin: 0;
       color: $blue !important;
     }
+  }
+}
+
+.submit{
+  margin-top: 1rem;
+  background-color: $blue;
+  input{
+    margin: 0;
+    color: #fff;
   }
 }

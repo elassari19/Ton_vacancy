@@ -1,5 +1,5 @@
 import { BtnPrimary } from 'components';
-import Image, { StaticImport } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { browser } from '../../../public';
@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 interface Props {
   className?: string;
   id?: string;
-  src: string | StaticImport;
+  src: string | StaticImageData;
   onClick?: () => void;
   title?: string;
   website?: string;

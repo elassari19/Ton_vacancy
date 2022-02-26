@@ -9,16 +9,18 @@ interface Props {
   error?: FieldError;
   className?: string;
   id?: string;
+  placeholder?: string;
+  type?: string;
 }
 
-const index: FC<Props> = ({ label, register, error, className, id }) => (
+const index: FC<Props> = ({ label, register, error, className, id, placeholder, type }) => (
   <div className={styles.container + ` ${className}`} id={id}>
     <label htmlFor={label}>
 
       {label}
 
-      <div>
-        <input {...register(label)} />
+      <div className={error?.message && styles.error}>
+        <input {...register(label)} placeholder={placeholder} type={type} />
       </div>
 
       {error?.message && <span>{error.message}</span>}
