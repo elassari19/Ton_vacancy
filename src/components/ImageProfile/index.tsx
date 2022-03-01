@@ -1,7 +1,7 @@
-import { BtnPrimary } from 'components';
+import { BtnPrimary, Input } from 'components';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { FC } from 'react';
+import React, { FC, FormEvent } from 'react';
 import { browser } from '../../../public';
 import styles from './styles.module.scss'
 
@@ -12,19 +12,27 @@ interface Props {
   onClick?: () => void;
   title?: string;
   website?: string;
+  onChange?: (ev: FormEvent<HTMLInputElement>)=>void;
 }
 
-const index: FC<Props> = ({src, className, id, onClick, title, website}) => {
+const index: FC<Props> = ({src, className, id, onClick, title, website, onChange}) => {
   return <div className={styles.container + ` ${className}`} id={id} onClick={onClick}>
-    
+
     <Image src={src} alt='profile' className={styles.image} />
-    
-    {title && <BtnPrimary title={title} blue onClick={()=>console.log('change logo')} />}
-    
+
+    {
+    title && <div className={styles.relative}>
+        <BtnPrimary title={title} blue onClick={()=>console.log('change logo')} />
+        <input type='file' name='image' className={styles.photo} />
+      </div>
+    }
+
     {website && <Link href={'https://www.google.com'}>
+
       <a><BtnPrimary  title={website} inIcon={browser} /></a>
+
     </Link>}
-    
+
   </div>;
 };
 

@@ -5,11 +5,14 @@
 }
 
 .info{
-  @include contained(1, flex, column, flex-end, flex-start);
   margin: 3rem 0;
+  @media only screen and (max-width: 576px) {
+    flex: 1;
+  }
   label{
-    width: 70%;
-    margin: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0;
     div, textarea{
       margin: 5px 0 0;
     }
@@ -39,14 +42,20 @@
 }
 
 .benfitsItems{
-  @include contained(1, flex, row, flex-start, center);
+  @include contained(auto, flex, row, flex-start, center);
   flex-wrap: wrap;
+  div{
+    box-sizing: border-box;
+    margin: 0;
+  }
   >div{
-    margin: 5px;
+    margin: 15px 10px 0 0;
+    min-width: 10rem;
     >div{
       border: 1px solid $blueLight;
-      padding: auto 0;
       border-radius: .5rem;
+      padding-left: 1.2rem;
+      justify-content: flex-start;
     }
   }
 }

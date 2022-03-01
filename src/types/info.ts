@@ -1,8 +1,9 @@
 type Iinfo = {
+  image: string;
   name: string;
   category: string;
   description: string;
-  phone: string;
+  phone: number | string;
   email: string;
   telegram: string;
   city: string;
