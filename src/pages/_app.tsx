@@ -7,11 +7,11 @@ import { Provider } from 'react-redux';
 import Store from 'store';
 
 function MyApp({Component, pageProps}: AppProps){
-  return <Layout>
-    <Provider store={Store}>
-      <Component {...pageProps} />
+  return <Provider store={Store}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
-    </Layout>
 }
 
 export default MyApp;

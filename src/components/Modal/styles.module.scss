@@ -39,6 +39,7 @@
 
 .telegram{
   @include contained(1,flex,column !important,center,center);
+  min-width: 25rem;
   padding: 1.5rem;
   border-radius: .6rem;
   background-color: $blueLight;

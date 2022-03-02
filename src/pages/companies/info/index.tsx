@@ -45,7 +45,6 @@ type IBenfits = {
 
 
 export const InfoState = {
-  image: '',
   name: '',
   category: '',
   description: '',
@@ -67,38 +66,52 @@ const index: FC<Props> = ({className, id}) => {
 
   const dispatch = useDispatch();
 
-  const info = useSelector( (state:State) => state.companyInfo);
-
-  // const {setCompanyInfo} = bindActionCreators(constant, dispatch);
-
+  // conect yup validation with the react-form-hook
   const { register, handleSubmit, formState:{ errors } } = useForm<Iinfo>({resolver: yupResolver(schema)});
+
+  const store = useSelector( (state:State) => state);
+console.log(store);
+  const [uploadImage, setUploadImage] = useState<any>('')
 
   const [value, setValue] = useState<Iinfo>(InfoState);
 
+  // save the informations in state
   const handleBenfits = (name: string, values: boolean) => {
     setValue(prev=>({...prev, benfits: {...value.benfits, [name]: values} }))
     // console.log(value)
   }
 
+  // save the benefits in state
   const handleChange = (ev: FormEvent<HTMLInputElement>) => {
     //@ts-ignore
     setValue(prev=>({...prev, [ev?.target.name]: ev?.target.value}));
   };
 
+  // save the information in store and clear the data from state
   const onSubmit: SubmitHandler<Iinfo> = () => {
     dispatch(setCompanyInfo(value));
     // console.log(value)
     setValue(InfoState);
   };
-  console.log(info)
 
+  // change profile image
+  const handleUploadImage = (e: any) => {
+    const reader = new FileReader();
+    if (e.target.files[0]){
+      reader.readAsDataURL(e.target.files[0]);
+    }
+      reader.onload = (readerEvent) => {
+      setUploadImage(readerEvent.target?.result)
+      }
+  };
+  // console.log(uploadImage)
 
   return <BrandPage>
     <div className={styles.container + ` ${className}`} id={id}>
       <Col xs={{offset: 1, span: 10}} lg={{offset: 1, span: 10}}>
         <Row>
           <Col lg={3}>
-            <ImageProfile src={profile} title='Change logo' website='Visite website' onChange={handleChange} />
+            <ImageProfile src={profile} title='Change logo' website='Visite website' onChange={handleUploadImage} />
           </Col>
           <Col className={styles.info} lg={7} xs={{offset: 1, span: 10}}>
             <form onSubmit={handleSubmit(onSubmit)}>

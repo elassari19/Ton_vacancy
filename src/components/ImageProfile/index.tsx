@@ -12,7 +12,7 @@ interface Props {
   onClick?: () => void;
   title?: string;
   website?: string;
-  onChange?: (ev: FormEvent<HTMLInputElement>)=>void;
+  onChange?: (ev: any)=>void;
 }
 
 const index: FC<Props> = ({src, className, id, onClick, title, website, onChange}) => {
@@ -23,7 +23,7 @@ const index: FC<Props> = ({src, className, id, onClick, title, website, onChange
     {
     title && <div className={styles.relative}>
         <BtnPrimary title={title} blue onClick={()=>console.log('change logo')} />
-        <input type='file' name='image' className={styles.photo} />
+        <input type='file' name='image' className={styles.photo} onChange={onChange} />
       </div>
     }
 

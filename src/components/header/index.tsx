@@ -15,11 +15,15 @@ import { useRouter } from 'next/router';
 import { MenuModel } from '../../layout';
 import { logout, personsWhite } from '../../../public';
 import { color } from 'theme';
+import { useDispatch, useSelector } from 'react-redux';
+import { State } from 'store';
+import { signOut } from 'store/signIn/constants';
 
 function index() {
 
   const router = useRouter();
   const [dropDownMenu, setDropDownMenu] = useState<boolean>(false);
+
   const handleDropMenu = () => {
     setDropDownMenu(!dropDownMenu);
     if(dropDownMenu) {
@@ -29,13 +33,22 @@ function index() {
     }
   };
 
-  const [auth, setAuth] = useState<boolean>(false);
+  const { auth } = useSelector((state: State)=> state.auth)
+  const dispatch = useDispatch();
+
   const [isModal, setIsModal] = useState<boolean>(false);
+  const [modalType, setModalType] = useState<string>('');
+
+  const handleModal = (type: string) => {
+    setModalType(type);
+    setIsModal(true);
+  }
 
   return <div className={styles.container}>
 
     {
-      isModal && <Modal onClick={()=>setIsModal(false)} setIsModal={setIsModal} />
+      // this modal display when click login or sign up
+      isModal && <Modal onClick={()=>setIsModal(false)} setIsModal={setIsModal} type={modalType} />
     }
 
     {/* toggle display menu */}
@@ -88,10 +101,10 @@ function index() {
               !auth
               ?<Row>
                 <Col sm={5}>
-                  <BtnPrimary title='Log in' onClick={()=>setIsModal(true)} white style={{width: 114}} />
+                  <BtnPrimary title='Log in' onClick={()=>handleModal('sign')} white style={{width: 114}} />
                 </Col>
                 <Col sm={5}>
-                  <BtnPrimary title='Sign up' onClick={()=>router.push('/suignup')} blueDark style={{width: 114}} />
+                  <BtnPrimary title='Sign up' onClick={()=>handleModal('')} blueDark style={{width: 114}} />
                 </Col>
               </Row>
               :<Row>
@@ -99,7 +112,7 @@ function index() {
                   <BtnPrimary title='Personal account' inIcon={personsWhite} onClick={()=>router.push('/suignup')} blueDark  />
                 </Col>
                 <Col sm={5} style={{padding: 0}}>
-                  <BtnPrimary title='Log out' endIcon={logout} onClick={()=>setAuth(false)} style={{color: color.gray}} />
+                  <BtnPrimary title='Log out' endIcon={logout} onClick={()=>dispatch(signOut())} style={{color: color.gray}} />
                 </Col>
               </Row>
             }

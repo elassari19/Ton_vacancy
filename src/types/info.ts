@@ -1,5 +1,4 @@
 type Iinfo = {
-  image: string;
   name: string;
   category: string;
   description: string;
@@ -15,11 +14,6 @@ type Iinfo = {
       discount: boolean;
       schedule: boolean;
   };
-}
-
-export type infoAction = {
-  type: string;
-  payload: Iinfo;
 }
 
 export default Iinfo
