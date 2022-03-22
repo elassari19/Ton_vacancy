@@ -26,6 +26,7 @@ import Modal from './Modal'
 import ImageProfile from './ImageProfile'
 import EditorInput from './EditorInput'
 import Input from './Input'
+import Skills from './Skills'
 
 export {
   Header,
@@ -56,4 +57,5 @@ export {
   ImageProfile,
   EditorInput,
   Input,
+  Skills
 }

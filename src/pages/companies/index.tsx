@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { FC, FormEvent, useState} from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { profile, search } from '../../../public';
+import { profile, search, swap } from '../../../public';
 import styles from './styles.module.scss';
 
 const item = ['','','','','','','','','','',''];
@@ -35,7 +35,7 @@ return <div className={styles.container}>
 
           {/* sort results */}
           <Col sm={4} xs={12}>
-            <Sort />
+            <Sort inIcon={swap} values={['newest', 'oldest']} name='sort' placeholder='Standart sorting' />
           </Col>
         </Row>
 

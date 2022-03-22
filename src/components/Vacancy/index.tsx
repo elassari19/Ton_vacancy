@@ -3,7 +3,7 @@ import { Card } from 'layout';
 import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { fire, location } from '../../../public';
+import { fire, location, deleted, reload } from '../../../public';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -12,13 +12,14 @@ interface Props {
   date?: string | number;
   price?: string | number;
   desc?: string;
-  image?: string;
   shadow?: boolean;
   title?: string;
-  location?: string;
+  local?: string;
+  auth?: boolean;
+  opened?: boolean;
 }
 
-const index: FC<Props> = ({ className, id, image, date, desc, title, price, location, shadow}) => {
+const index: FC<Props> = ({ className, id, date, desc, title, price, local, shadow, auth, opened}) => {
 
   const route = useRouter();
   // console.log(route.query)
@@ -34,11 +35,17 @@ return <div
         <Col xs={5}>
           <span>{date || 'Published 6 hours ago - July, 23 16:00'}</span>
         </Col>
-        {
-          image && <Col xs={3} className='px-4'>
-          <BtnPrimary title='Featured' inIcon={fire} className={styles.featured + ` p-0`} />
+
+        <Col xs={3} className='px-1'>
+          <BtnPrimary title='Featured' inIcon={fire} className={styles.featured + ` p-1 px-3`} />
         </Col>
+
+        {
+          auth && <Col xs={{offset: 2}}>
+            <BtnPrimary title='' inIcon={opened ? deleted : reload} style={{marginLeft: '3rem'}} />
+          </Col>
         }
+
       </Row>
 
       <Row className={styles.title}>{title || 'Expert consultant on work with clients (EdTech + IT)'}</Row>
@@ -50,7 +57,7 @@ return <div
           {price || '$1200-$1400'}
         </Col>
         <Col xs={4}>
-          <BtnPrimary title={location || 'Estonia, Tallinn'} inIcon={location}/>
+          <BtnPrimary title={local || 'Estonia, Tallinn'} inIcon={location}/>
         </Col>
       </Row>
     </Card>

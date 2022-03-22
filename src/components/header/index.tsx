@@ -22,6 +22,8 @@ import { signOut } from 'store/signIn/constants';
 function index() {
 
   const router = useRouter();
+  const path = router.pathname.split('/')[1];
+
   const [dropDownMenu, setDropDownMenu] = useState<boolean>(false);
 
   const handleDropMenu = () => {
@@ -98,23 +100,24 @@ function index() {
 
           <Col lg={5} className={styles.buttons} >
             {
-              !auth
-              ?<Row>
-                <Col sm={5}>
-                  <BtnPrimary title='Log in' onClick={()=>handleModal('sign')} white style={{width: 114}} />
-                </Col>
-                <Col sm={5}>
-                  <BtnPrimary title='Sign up' onClick={()=>handleModal('')} blueDark style={{width: 114}} />
-                </Col>
-              </Row>
-              :<Row>
-                <Col sm={7} style={{padding: 0}}>
-                  <BtnPrimary title='Personal account' inIcon={personsWhite} onClick={()=>router.push('/suignup')} blueDark  />
+              auth == true && <Row>
+                <Col lg={7} style={{padding: 0}}>
+                  <BtnPrimary title='Personal account' inIcon={personsWhite} onClick={()=>router.push(`/${path}/editProfile`)} blueDark  />
                 </Col>
                 <Col sm={5} style={{padding: 0}}>
                   <BtnPrimary title='Log out' endIcon={logout} onClick={()=>dispatch(signOut())} style={{color: color.gray}} />
                 </Col>
               </Row>
+            }
+            {
+              auth == false && <Row>
+              <Col sm={5}>
+                <BtnPrimary title='Log in' onClick={()=>handleModal('sign')} white style={{width: 114}} />
+              </Col>
+              <Col sm={5}>
+                <BtnPrimary title='Sign up' onClick={()=>handleModal('')} blueDark style={{width: 114}} />
+              </Col>
+            </Row>
             }
           </Col>
 

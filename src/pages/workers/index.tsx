@@ -36,7 +36,7 @@ function index() {
 
             {/* sort results */}
             <Col sm={4} xs={12}>
-              <Sort />
+              <Sort values={['newset', 'oldset']} name='sort' />
             </Col>
           </Row>
 

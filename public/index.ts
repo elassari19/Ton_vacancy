@@ -32,6 +32,9 @@ import fire from './fire.svg';
 import location from './location.svg';
 import logout from './logout.svg';
 import x from './x.svg';
+import reload from './reload.svg';
+import deleted from './delete.svg';
+import Plus from './Plus.svg';
 
 export {
   logo,
@@ -68,4 +71,7 @@ export {
   location,
   logout,
   x,
+  reload,
+  deleted,
+  Plus,
 }

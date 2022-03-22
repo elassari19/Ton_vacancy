@@ -1,6 +1,6 @@
 import { BtnPrimary } from 'components';
 import Image from 'next/image';
-import React, { createRef, FC, useState } from 'react';
+import React, { useRef, FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from 'store/signIn/constants';
 import { signUP } from 'store/signUp/constants';
@@ -22,7 +22,7 @@ const index: FC<Props> = ({ className, id, onClick, setIsModal, type}) => {
 
   const [employer, setEmployer] = useState(true);
 
-  const accept = createRef<HTMLInputElement>();
+  const accept = useRef<any>();
 
   const handleSubmit = () => {
     if( (accept.current?.checked && type == '') || type == 'sign') {

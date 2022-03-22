@@ -1,6 +1,7 @@
-import Iinfo, {infoAction} from "./info";
+import Iinfo from "./info";
+import Ivacancy from './vacancy'
 
 export type {
   Iinfo,
-  infoAction,
+  Ivacancy
 }

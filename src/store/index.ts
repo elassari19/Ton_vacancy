@@ -1,4 +1,5 @@
 import { applyMiddleware, createStore, combineReducers } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from "redux-thunk";
 import infoReducer from "./info";
 import signUpReducer from "./signUp";
@@ -10,7 +11,7 @@ const rootReducer = combineReducers({
   auth: signInReducer
 });
 
-const Store = createStore(rootReducer,{},applyMiddleware(thunk));
+const Store = createStore(rootReducer,{},composeWithDevTools(applyMiddleware(thunk)));
 
 export type State = ReturnType<typeof rootReducer>;
 export default Store;

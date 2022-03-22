@@ -23,12 +23,12 @@ interface Props {
 const index: FC<Props> = ({title, id, className, white, blue, blueLight, blueDark, green, greenDark, grayLight, onClick, inIcon, endIcon, style}) => {
   const color = blue?'blue':blueDark?'blueDark':green?'green':greenDark?'greenDark':white?'white':grayLight?'grayLight': blueLight ? 'blueLight' : 'none';
   return <div
-    id={id}
     onClick={onClick}
-    className={styles.container + ` ${styles[color]} ` + className}
+    className={styles.container + ` ${styles[color]} ${className} `}
+    id={id}
     style={style}
   >
-    {inIcon&&<Image color={'#fff'} src={inIcon}  />} <span>{title}</span> {endIcon&&<Image color={'#fff'} src={endIcon}  />}
+    {inIcon&&<Image color={'#fff'} src={inIcon} sizes='24' />} <span>{title}</span> {endIcon&&<Image color={'#fff'} src={endIcon}  />}
   </div>;
 };
 

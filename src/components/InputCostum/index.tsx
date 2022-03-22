@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { CSSProperties, FC, FormEvent, HTMLInputTypeAttribute, memo, ReactNode } from 'react';
+import React, { ChangeEvent, CSSProperties, FC, HTMLInputTypeAttribute, memo, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -12,14 +12,16 @@ interface Props {
   type?: HTMLInputTypeAttribute;
   placeholder?: string;
   value?: string;
-  onChange?: (ev: FormEvent<HTMLInputElement>) => void;
+  defaultValue?: string | number;
+  onChange?: (ev: ChangeEvent<HTMLInputElement>) => void;
   style?: CSSProperties;
+  onClick?: () => void;
 }
 
-const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type, placeholder, value, onChange, style}) => {
+const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type, placeholder, value, defaultValue, onChange, style, onClick}) => {
   return <div className={styles.container + ` ${className}`} id={id}>
 
-    {inIcon && <Image src={inIcon} width={size||22} height={size||22} />}
+    {inIcon && <Image onClick={onClick} src={inIcon} width={size||22} height={size||22} />}
 
     <input 
       name={id} id={id} 
@@ -27,12 +29,13 @@ const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type
       placeholder={placeholder} 
       value={value} 
       onChange={onChange} 
-      style={style} 
+      style={style}
+      defaultValue={defaultValue}
     />
 
     {children}
 
-    {endIcon && <Image src={endIcon} />}
+    {endIcon && <Image onClick={onClick} src={endIcon} />}
 
   </div>;
 };

@@ -7,6 +7,9 @@ import {browser, profile} from '../../../../public';
 import { BtnPrimary, Companies, Pagination, Sevices, Vacancy, NoVacancy } from '../../../components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
+import { State } from 'store';
+import { BrandPage } from 'layout';
 
 interface Props {
   vacancy: any;
@@ -14,22 +17,19 @@ interface Props {
 
 const index: FC<Props> = ({vacancy}) => {
 
-  const [active, setActive] = useState<number>(8);
-  // this method return the items (vacany) whish must be display in this page considered by number of page
-  const item = Array(45).fill('').map(
-    (_,idx)=> (idx>=(active-1)*3&&idx<=(active-1)*3+2) ? <Vacancy key={idx} id={idx} shadow />: null
-  );
+  const {auth} = useSelector((pre: State)=>pre.auth);
 
   const route = useRouter();
 
-  return <div className={styles.container}>
+  const [opened, setOpened] = useState(true)
 
-    {/* TON VACANCY brand */}
-    <Row className={styles.brand} >
-      <Col >
-        TON VACANCY
-      </Col>
-    </Row>
+  const [active, setActive] = useState<number>(8);
+  // this method return the items (vacany) whish must be display in this page considered by number of page
+  const item = Array(45).fill('').map(
+    (_,idx)=> (idx>=(active-1)*3&&idx<=(active-1)*3+2) ? <Vacancy opened={opened} auth={auth} key={idx} id={idx} shadow />: null
+  );
+
+  return <BrandPage className={styles.container}>
 
     {/* companie informations */}
     <Row className={styles.info}>
@@ -64,8 +64,8 @@ const index: FC<Props> = ({vacancy}) => {
       </Col>
 
       {/* companie sevices */}
-      <Col xs={12} lg={5} className='my-md-4 my-sm-5'>
-        <Sevices />
+      <Col xs={12} lg={5}>
+        <Sevices className='mt-3' />
       </Col>
 
     </Row>
@@ -78,6 +78,25 @@ const index: FC<Props> = ({vacancy}) => {
           <Col xs={12} lg={8}>
 
             <h3 className='mt-4 mb-3'>Vacancies</h3>
+
+            <Row>
+              <Col className='d-flex flex-row p-0'>
+                <div className={opened ? styles.active : ''}>
+                  <BtnPrimary title='Opened vacancies' onClick={()=>setOpened(true)} />
+                  <div />
+                </div>
+                <div className={!opened ? styles.active : ''}>
+                  <BtnPrimary title='Archieved vacancies' onClick={()=>setOpened(false)} />
+                  <div />
+                </div>
+              </Col>
+              {
+                auth &&
+                <Col lg={{offset: 2, span: 3}}>
+                  <BtnPrimary title='Publish vacancy' blue className='px-0' onClick={() => route.push('/companies/publishVacancy')} />
+                </Col>
+              }
+            </Row>
 
             {
               item.map((item,idx)=>item&&item)
@@ -102,7 +121,7 @@ const index: FC<Props> = ({vacancy}) => {
       :<NoVacancy />
     }
 
-  </div>;
+  </BrandPage>;
 };
 
 // export const getServerSideProps: GetServerSideProps = async (context) => {

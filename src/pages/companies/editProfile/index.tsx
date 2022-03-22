@@ -1,4 +1,5 @@
 import React, { FC, FormEvent, memo, useState } from 'react';
+import { useRouter } from 'next/router';
 import { BtnPrimary, ImageProfile, Input, InputCostum } from 'components';
 import { BrandPage } from 'layout';
 import { Col, Row } from 'react-bootstrap';
@@ -70,7 +71,9 @@ const index: FC<Props> = ({className, id}) => {
   const { register, handleSubmit, formState:{ errors } } = useForm<Iinfo>({resolver: yupResolver(schema)});
 
   const store = useSelector( (state:State) => state);
-console.log(store);
+
+  const route = useRouter();
+
   const [uploadImage, setUploadImage] = useState<any>('')
 
   const [value, setValue] = useState<Iinfo>(InfoState);
@@ -104,9 +107,11 @@ console.log(store);
       setUploadImage(readerEvent.target?.result)
       }
   };
-  // console.log(uploadImage)
+
 
   return <BrandPage>
+    {
+      store.auth.auth ?
     <div className={styles.container + ` ${className}`} id={id}>
       <Col xs={{offset: 1, span: 10}} lg={{offset: 1, span: 10}}>
         <Row>
@@ -175,6 +180,9 @@ console.log(store);
       </Col>
 
     </div>
+    :<div style={{marginTop: 100, fontSize: 24, fontWeight: 600, textAlign: 'center'}} id={id}>Log in or Sign up</div>
+    }
+
   </BrandPage>
 };
 
