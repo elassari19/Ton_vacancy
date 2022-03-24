@@ -1,7 +1,10 @@
 {
+  "homepage": "https://elassari19.github.io/Ton_vacancy/",
   "name": "find_job",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "export": "next export && touch out/.nojekyll",
