@@ -19,7 +19,7 @@ const index: FC<Props> = ({ className, id}) => {
 
       <Row>
         <Col xs={6} className={styles.image}>
-          <Image src={profile} width={130} height={130} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH!+profile} width={130} height={130} />
         </Col>
         <Col xs={6} className={styles.info}>
           <div className={styles.head}>

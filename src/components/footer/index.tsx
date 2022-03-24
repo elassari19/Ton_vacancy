@@ -16,16 +16,16 @@ const index: FC<Props> = ({ className, id}) => {
         <Col sm={{offset: 1, span: 10}} md={7}>
           <Row>
 
-            <Col><Image src={Logo} /></Col>
+            <Col><Image src={process.env.NEXT_PUBLIC_BASE_PATH+Logo} /></Col>
 
             <Col sm={12} md={4}>
               <p className={styles.title}>Applicant</p>
               <div>
-                 <Image src={vector} />
+                 <Image src={process.env.NEXT_PUBLIC_BASE_PATH+vector} />
                  <span>To find a job</span>
               </div>
               <div>
-                 <Image src={vector} />
+                 <Image src={process.env.NEXT_PUBLIC_BASE_PATH+vector} />
                  <span>Submit your CV</span>
               </div>
             </Col>
@@ -33,11 +33,11 @@ const index: FC<Props> = ({ className, id}) => {
             <Col>
               <p className={styles.title}>Employer</p>
               <div>
-                 <Image src={vector} />
+                 <Image src={process.env.NEXT_PUBLIC_BASE_PATH+vector} />
                  <span>Добавить вакансию</span>
               </div>
               <div>
-                 <Image src={vector} />
+                 <Image src={process.env.NEXT_PUBLIC_BASE_PATH+vector} />
                  <span>Поиск резюме</span>
               </div>
             </Col>
@@ -46,7 +46,7 @@ const index: FC<Props> = ({ className, id}) => {
         </Col>
 
         <Col className={styles.center} style={{paddingTop: 15}} >
-          <Image src={telegram}/>
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH+telegram}/>
           <span className={styles.telegram}>  Visit Telegram channel</span>
         </Col>
 

@@ -116,7 +116,7 @@ const index: FC<Props> = ({className, id}) => {
       <Col xs={{offset: 1, span: 10}} lg={{offset: 1, span: 10}}>
         <Row>
           <Col lg={3}>
-            <ImageProfile src={profile} title='Change logo' website='Visite website' onChange={handleUploadImage} />
+            <ImageProfile src={process.env.NEXT_PUBLIC_BASE_PATH! + profile} title='Change logo' website='Visite website' onChange={handleUploadImage} />
           </Col>
           <Col className={styles.info} lg={7} xs={{offset: 1, span: 10}}>
             <form onSubmit={handleSubmit(onSubmit)}>

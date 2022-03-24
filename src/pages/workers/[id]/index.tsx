@@ -33,7 +33,7 @@ const index: FC<Props> = ({person}) => {
         <Row className={styles.person}>
           {/* profile image */}
           <Col xs={12} md={5} style={{position: 'relative'}}>
-            <Image src={profile} className={styles.Image} width={245} height={245} />
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH! + profile} className={styles.Image} width={245} height={245} />
             <div className={styles.green} />
           </Col>
           {/* profile title */}

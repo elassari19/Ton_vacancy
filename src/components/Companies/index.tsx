@@ -1,6 +1,6 @@
 import { Tips } from 'components';
 import { Card } from 'layout';
-import Image, { StaticImport } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC, memo } from 'react';
 import { Col, Row } from 'react-bootstrap';
@@ -16,7 +16,7 @@ interface Props {
   link ?: string;
   employees ?: string;
   onMarket ?: string;
-  image ?: string | StaticImport;
+  image ?: string ;
   title ?: string;
   shadow ?: boolean;
 }
@@ -28,14 +28,14 @@ const index: FC<Props> = ({ className, id, onClick, desc, link, employees, onMar
       image &&
       <Col xs={{offset: 1, span:8}} md={{offset: 0, span: 3}}>
         {
-          image && <Image src={image} alt='profile' />
+          image && <Image src={process.env.NEXT_PUBLIC_BASE_PATH + image} alt='profile' />
         }
           {
             link 
             && <Row>
                 <Link href={'https://www.google.com'}>
                 <a className={styles.anchor}>
-                  <Image src={browser}/>
+                  <Image src={process.env.NEXT_PUBLIC_BASE_PATH + browser}/>
                   <span>Visit website</span>
                 </a>
               </Link>
@@ -57,11 +57,11 @@ const index: FC<Props> = ({ className, id, onClick, desc, link, employees, onMar
       
       <Row className={styles.flexend}>
         <div className={styles.flex}>
-          <Image src={persons} alt='persons' />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + persons} alt='persons' />
           <p className='text-bolder'>more than {employees} employees</p>
         </div>
         <div className={styles.flex}>
-          <Image src={market} alt='market' />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + market} alt='market' />
           <p className='text-bolder'>{onMarket} years on the market</p>
         </div>
       </Row>

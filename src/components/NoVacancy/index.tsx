@@ -12,7 +12,7 @@ interface Props {
 const index: FC<Props> = ({ className, id}) => {
   return <Row className={styles.container + ` ${className}`} id={id}>
     <Col xs={12} lg={{offset:1,span: 5}}>
-      <Image src={tip05} />
+      <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip05} />
     </Col>
     <Col xs={12} lg={{span: 5}} className={styles.vacancy}>
       <p className='h5'>Vacancies</p>

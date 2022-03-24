@@ -17,33 +17,33 @@ const index: FC<Props> = ({ className, id}) => {
 
         <Row>
           <Col xs={6}>
-            <Image src={celebration}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + celebration}/>
             <span>Corporate events</span>
           </Col>
           <Col xs={6}>
-            <Image src={heart}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + heart}/>
             <span>Health insurance</span>
           </Col>
         </Row>
 
         <Row>
           <Col xs={6}>
-            <Image src={Tag}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + Tag}/>
             <span>Employee discounts</span>
           </Col>
           <Col xs={6}>
-            <Image src={gift}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + gift}/>
             <span>Bonuses and premiums</span>
           </Col>
         </Row>
 
         <Row>
           <Col xs={6}>
-            <Image src={Clock}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + Clock}/>
             <span>Flexible schedule</span>
           </Col>
           <Col xs={6}>
-            <Image src={dollar}/>
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + dollar}/>
             <span>Regular salary review</span>
           </Col>
         </Row>
@@ -52,7 +52,7 @@ const index: FC<Props> = ({ className, id}) => {
 
       <Link href={'https://www.google.com'}>
         <a className={styles.anchor}>
-          <Image src={browser}/>
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + browser}/>
           <span>Visit website</span>
         </a>
       </Link>

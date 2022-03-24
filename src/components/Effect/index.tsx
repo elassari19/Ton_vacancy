@@ -13,7 +13,7 @@ interface Props {
 
 const index: FC<Props> = ({ className, id, rotate, top, left, size, icon}) => {
   return <div id={id} style={{position: 'absolute', top, left, transform: `rotate(${rotate}deg)`}}>
-    <Image src={icon||''} width={size} height={size} />
+    <Image src={process.env.NEXT_PUBLIC_BASE_PATH + icon||''} width={size} height={size} />
   </div>;
 };
 

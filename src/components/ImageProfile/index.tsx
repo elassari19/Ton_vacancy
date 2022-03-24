@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 interface Props {
   className?: string;
   id?: string;
-  src: string | StaticImageData;
+  src: string ;
   onClick?: () => void;
   title?: string;
   website?: string;
@@ -18,7 +18,7 @@ interface Props {
 const index: FC<Props> = ({src, className, id, onClick, title, website, onChange}) => {
   return <div className={styles.container + ` ${className}`} id={id} onClick={onClick}>
 
-    <Image src={src} alt='profile' className={styles.image} />
+    <Image src={process.env.NEXT_PUBLIC_BASE_PATH+src} alt='profile' className={styles.image} />
 
     {
     title && <div className={styles.relative}>

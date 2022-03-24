@@ -70,7 +70,7 @@ function index() {
           </div>
 
           <Link href={'/'}>
-            <Image src={Logo} />
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH+Logo} />
           </Link>
 
           <FiSearch size={25} onClick={()=>SubstitutZ('header', 'search')} />
@@ -88,7 +88,7 @@ function index() {
 
           <Col lg={7} className={styles.start}>
             <Col sm={3} onClick={()=>router.push('/')}>
-                <Image src={Logo} />
+                <Image src={process.env.NEXT_PUBLIC_BASE_PATH+Logo} />
             </Col>
             <Col  onClick={()=>router.push('/companies')}>
               <BtnPrimary title='I am employer' inIcon={persons} />

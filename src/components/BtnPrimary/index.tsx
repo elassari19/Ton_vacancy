@@ -28,7 +28,14 @@ const index: FC<Props> = ({title, id, className, white, blue, blueLight, blueDar
     id={id}
     style={style}
   >
-    {inIcon&&<Image color={'#fff'} src={inIcon} sizes='24' />} <span>{title}</span> {endIcon&&<Image color={'#fff'} src={endIcon}  />}
+    {
+      inIcon&&<Image color={'#fff'} src={process.env.NEXT_PUBLIC_BASE_PATH + inIcon} sizes='24' />
+    }
+    <span>{title}</span>
+    {
+      endIcon&&<Image color={'#fff'} src={process.env.NEXT_PUBLIC_BASE_PATH + endIcon}  />
+    }
+
   </div>;
 };
 

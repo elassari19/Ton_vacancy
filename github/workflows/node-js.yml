@@ -23,8 +23,11 @@ steps:
 
     - run: npm ci
     - run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /Ton_vacancy
     - run: npm run export
-
+      env:
+        NEXT_PUBLIC_BASE_PATH: /Ton_vacancy
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:

@@ -39,11 +39,11 @@ const index: FC<Props> = ({vacancy}) => {
 
           {/* companie image and url */}
         <Col xs={6}  lg={4}>
-          <Image src={profile} className={styles.image} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH! + profile} className={styles.image} />
           <Row>
             <Link href={'https://www.google.com'}>
               <a className={styles.anchor}>
-                <Image src={browser}/>
+                <Image src={process.env.NEXT_PUBLIC_BASE_PATH + browser}/>
                 <span>Visit website</span>
               </a>
             </Link>

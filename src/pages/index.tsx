@@ -16,6 +16,8 @@ const index: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"/>
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png"/>
         <title>TON_vacancy</title>
         <meta name="description" content="TON work allows you to find the most effective and top employees from all over the world" />
         <link rel="icon" type='image/png' sizes="32x32" href='../../public/logo.png' />
@@ -35,7 +37,7 @@ const index: NextPage = () => {
               <BtnPrimary greenDark title='I am applicant' inIcon={personsWhite} style={{width: '45%', padding: '12px'}} onClick={()=>route.push('/companies')} />
           </TipsCard>
 
-            <Image src={picture1} />
+            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + picture1} />
         </Section>
 
         {/* How to find really a good job? */}
@@ -51,15 +53,15 @@ const index: NextPage = () => {
 
         {/* images */}
         <Section>
-          <Image src={tip01} />
-          <Image src={tip02} />
-          <Image src={tip03} />
-          <Image src={tip04} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip01} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip02} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip03} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip04} />
         </Section>
 
         {/* How to find really a good job?  */}
         <Section style={{background: '#0001'}}>
-          <Image src={picture2} />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + picture2} />
           <div>
             <Tips title='TIPS' style={{height: 35, width: 114}} />
             <TipsCard
