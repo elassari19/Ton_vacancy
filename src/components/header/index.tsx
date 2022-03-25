@@ -1,8 +1,5 @@
 import Image from 'next/image';
 import React, { memo, useState } from 'react';
-import Logo from '../../../public/Logo.svg';
-import Suitcase from '../../../public/Suitcase.svg';
-import persons from '../../../public/persons.svg';
 import {AiOutlineMenu} from 'react-icons/ai'
 import Link from 'next/link';
 import { BtnPrimary, DropDownMenu, Modal, SearchHeader } from '..';
@@ -13,7 +10,7 @@ import { Col, Row } from 'react-bootstrap';
 import styles from './styles.module.scss'
 import { useRouter } from 'next/router';
 import { MenuModel } from '../../layout';
-import { logout, personsWhite } from '../../../public';
+import { logout, personsWhite, suitCase, persons, Logo } from '../../../public';
 import { color } from 'theme';
 import { useDispatch, useSelector } from 'react-redux';
 import { State } from 'store';
@@ -94,7 +91,7 @@ function index() {
               <BtnPrimary title='I am employer' inIcon={persons} />
             </Col>
             <Col  onClick={()=>router.push('/workers')}>
-              <BtnPrimary title='I am applicant' inIcon={Suitcase} />
+              <BtnPrimary title='I am applicant' inIcon={suitCase} />
             </Col>
           </Col>
 

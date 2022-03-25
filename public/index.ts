@@ -4,8 +4,8 @@ import persons from './persons.svg';
 import personsWhite from './personsWhite.svg';
 import picture1 from './picture1.svg';
 import picture2 from './picture2.svg';
-import suitCase from './suitCaseWhite.svg';
-import suitCaseWhite from './suitCaseWhite.svg';
+import suitCase from './suitCase.svg';
+import SuitcaseWhite from './SuitcaseWhite.svg';
 import tip01 from './tip01.svg';
 import tip02 from './tip02.svg';
 import tip03 from './tip03.svg';
@@ -43,7 +43,7 @@ export {
   personsWhite,
   picture1,
   suitCase,
-  suitCaseWhite,
+  SuitcaseWhite,
   tip01,
   tip02,
   tip03,

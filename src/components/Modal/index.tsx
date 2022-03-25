@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { signIn } from 'store/signIn/constants';
 import { signUP } from 'store/signUp/constants';
 import { color } from 'theme';
-import { persons, personsWhite, suitCase, suitCaseWhite, telegram } from '../../../public';
+import { persons, personsWhite, suitCase, SuitcaseWhite, telegram } from '../../../public';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -49,7 +49,7 @@ const index: FC<Props> = ({ className, id, onClick, setIsModal, type}) => {
             blueDark={employer?true:false} grayLight={!employer?true:false} 
             onClick={()=>setEmployer(true)}
             style={{color: !employer?color.gray:'#fff'}}
-            inIcon={employer?suitCase:suitCaseWhite} className={styles.button}
+            inIcon={employer?suitCase:SuitcaseWhite} className={styles.button}
           />
           <BtnPrimary title='I am applicant' 
             blueDark={!employer?true:false} grayLight={employer?true:false} 

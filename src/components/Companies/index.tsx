@@ -1,11 +1,9 @@
 import { Tips } from 'components';
-import { Card } from 'layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC, memo } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { color } from 'theme';
-import { browser, market, persons, profile } from '../../../public';
+import { browser, market, persons } from '../../../public';
 import styles from './styles.module.scss'
 
 interface Props {
@@ -16,7 +14,7 @@ interface Props {
   link ?: string;
   employees ?: string;
   onMarket ?: string;
-  image ?: string ;
+  image ?: string | StaticImageData ;
   title ?: string;
   shadow ?: boolean;
 }
