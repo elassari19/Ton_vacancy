@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useEffect, useState } from 'react';
 import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
@@ -13,10 +13,19 @@ interface Props {
   person: any;
 }
 
-const index: FC<Props> = ({person}) => {
+const index: FC<Props> = () => {
 
-  const { name, address } = person;
   const route = useRouter();
+  const [person, setPerson] = useState<any>();
+
+  useEffect( () => {
+    // fetch(`https://jsonplaceholder.typicode.com/users/${route.query?.id}`)
+    // .then(res=> setPerson(res.json))
+    // const person = await data.json();
+
+    // setPerson(person);
+  
+  }, [])
 
   return <div className={styles.container}>
 
@@ -60,8 +69,8 @@ const index: FC<Props> = ({person}) => {
       <Col xs={12} md={7}>
         <Card shadow >
           <Heading tag='h3' color={color.blueDark}  className='fs-3' title='Portfolio' />
-          <Heading tag='p' title={name} className='fs-5 fw-normal' />
-          <Heading tag='p' title={address.street} className='fs-5 fw-normal' />
+          <Heading tag='p' title='name' className='fs-5 fw-normal' />
+          <Heading tag='p' title='adriss' className='fs-5 fw-normal' />
           <Heading tag='p' title='RESEARCH INTERESTS' className='fs-4 fw-bold' />
           <Heading tag='p' title='Hispanic Literature, Latin American Literature, Peninsular Literature' className={styles. text +' fs-5 fw-normal'} />
           <Heading tag='p' title='EDUCATION' className='fs-4 fw-bold' />
@@ -85,23 +94,4 @@ const index: FC<Props> = ({person}) => {
   </div>;
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  try {
-    const data = await fetch(`https://jsonplaceholder.typicode.com/users/${context.params?.id}`);
-    const person = await data.json();
-
-    return {
-      props: {
-        person,
-      },
-    };
-  } catch {
-    context.res.statusCode = 404;
-    return {
-      props: {},
-    };
-  }
-};
-
-export default memo(index);
-
+export default index

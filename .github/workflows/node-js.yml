@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -32,10 +32,10 @@ jobs:
     - name: Build my App  
       run: npm run build
       env:
-        NEXT_PUBLIC_BASE_PATH: /youtube-2020-august-github-pages-github-actions
+        NEXT_PUBLIC_BASE_PATH: /Ton_vacancy
     - run: npm run export
       env:
-        NEXT_PUBLIC_BASE_PATH: /youtube-2020-august-github-pages-github-actions
+        NEXT_PUBLIC_BASE_PATH: /Ton_vacancy
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   // webpack(config) {
   //   config.module.rules.push({
@@ -7,6 +7,10 @@ const nextConfig = {
   //     use: [{ loader: '@svgr/webpack', options: { icon: true } }],
   //   })
   //   return config
+  // },
+  // images: {
+  //   disableStaticImages: true,
+  //   loader: "custom",
   // },
   typescript: {
     ignoreBuildErrors: true,
@@ -19,4 +23,4 @@ const nextConfig = {
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
 }
 
-module.exports = nextConfig
+// module.exports = nextConfig
