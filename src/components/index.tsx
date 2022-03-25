@@ -1,5 +1,3 @@
-import Header from './Header'
-import Footer from './Footer'
 import SearchHeader from './SearchHeader'
 import SearchWorkers from './SearchWorkers'
 import BtnPrimary from './BtnPrimary'
@@ -29,8 +27,6 @@ import Input from './Input'
 import Skills from './Skills'
 
 export {
-  Header,
-  Footer,
   SearchHeader,
   DropDownMenu,
   BtnPrimary,
