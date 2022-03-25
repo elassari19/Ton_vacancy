@@ -10,9 +10,9 @@ interface Props {
 
 const index: FC<Props> = ({ className, id}) => {
   return <div className={styles.container + ` ${className}`} id={id}>
-    <Image src={process.env.NEXT_PUBLIC_BASE_PATH + User}/>
+    <Image src={User}/>
      12.y.o. 
-     <Image src={process.env.NEXT_PUBLIC_BASE_PATH + Clock}/> <span>UTC+14:00</span>
+     <Image src={Clock}/> <span>UTC+14:00</span>
   </div>;
 };
 

@@ -62,7 +62,7 @@ const index: FC<Props> = ({ className, id, onClick, setIsModal, type}) => {
 
 
       <div className={styles.telegram} onClick={handleSubmit}>
-        <Image src={process.env.NEXT_PUBLIC_BASE_PATH + telegram} />
+        <Image src={telegram} />
         <span>{type != 'sign' ? 'Sign up' : 'Sign'} with telegram</span>
       </div>
 

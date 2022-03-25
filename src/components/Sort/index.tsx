@@ -16,13 +16,13 @@ interface Props {
 
 const index: FC<Props> = ({ className, id, values, name, style, placeholder, inIcon, endIcon}) => {
   return <div className={styles.container + ` ${className}`} id={id} style={style}>
-    { inIcon && <Image src={process.env.NEXT_PUBLIC_BASE_PATH + inIcon} />}
+    { inIcon && <Image src={inIcon} />}
     <select placeholder={placeholder} name={name}>
       {
         values?.map(item=><option key={item} value={item}>{item}</option>)
       }
     </select>
-    { endIcon && <Image src={process.env.NEXT_PUBLIC_BASE_PATH + endIcon} />}
+    { endIcon && <Image src={endIcon} />}
   </div>
 };
 

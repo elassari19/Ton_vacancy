@@ -19,13 +19,13 @@ const index: FC = () => {
 
       {/* vacancy image */}
       <Col xs={{offset: 2, span: 8}} lg={{offset: 0, span: 3}}>
-      <Image src={process.env.NEXT_PUBLIC_BASE_PATH! + profile} className={styles.image} />
+      <Image src={profile} className={styles.image} />
           <Row className='text-center'>
             <span className='h5'>Amazon Inc.</span>
             <span className='h6 text-secondary'>Marketplace</span>
             <Link href={'https://www.google.com'}>
               <a className={styles.anchor}>
-                <Image src={process.env.NEXT_PUBLIC_BASE_PATH + browser}/>
+                <Image src={browser}/>
                 <span>Visit website</span>
               </a>
             </Link>
@@ -38,15 +38,15 @@ const index: FC = () => {
         <Col lg={10}>
           <Row className={styles.benefices}>
           <Col lg={4} >
-              <Image src={process.env.NEXT_PUBLIC_BASE_PATH + celebration} />
+              <Image src={celebration} />
               <span>Corporate events</span>
             </Col>
             <Col lg={4} >
-              <Image src={process.env.NEXT_PUBLIC_BASE_PATH + heart} />
+              <Image src={heart} />
               <span>Health insurance</span>
             </Col>
             <Col lg={4} >
-              <Image src={process.env.NEXT_PUBLIC_BASE_PATH + Tag} />
+              <Image src={Tag} />
               <span>Employee discounts</span>
             </Col>
           </Row>

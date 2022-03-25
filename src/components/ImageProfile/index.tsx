@@ -18,7 +18,7 @@ interface Props {
 const index: FC<Props> = ({src, className, id, onClick, title, website, onChange}) => {
   return <div className={styles.container + ` ${className}`} id={id} onClick={onClick}>
 
-    <Image src={process.env.NEXT_PUBLIC_BASE_PATH+src} alt='profile' className={styles.image} />
+    <Image src={src} alt='profile' className={styles.image} />
 
     {
     title && <div className={styles.relative}>

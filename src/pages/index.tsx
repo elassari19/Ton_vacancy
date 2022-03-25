@@ -37,7 +37,7 @@ const index: NextPage = () => {
               <BtnPrimary greenDark title='I am applicant' inIcon={personsWhite} style={{width: '45%', padding: '12px'}} onClick={()=>route.push('/companies')} />
           </TipsCard>
 
-            <Image src={process.env.NEXT_PUBLIC_BASE_PATH + picture1} />
+            <Image src={picture1} />
         </Section>
 
         {/* How to find really a good job? */}
@@ -53,15 +53,15 @@ const index: NextPage = () => {
 
         {/* images */}
         <Section>
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip01} />
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip02} />
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip03} />
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + tip04} />
+          <Image src={tip01} />
+          <Image src={tip02} />
+          <Image src={tip03} />
+          <Image src={tip04} />
         </Section>
 
         {/* How to find really a good job?  */}
         <Section style={{background: '#0001'}}>
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH + picture2} />
+          <Image src={picture2} />
           <div>
             <Tips title='TIPS' style={{height: 35, width: 114}} />
             <TipsCard
