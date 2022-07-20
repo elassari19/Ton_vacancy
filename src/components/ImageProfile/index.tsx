@@ -1,5 +1,9 @@
 import { BtnPrimary, Input } from 'components';
+<<<<<<< HEAD
 import Image, { StaticImageData } from 'next/image';
+=======
+import Image from 'next/image';
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import Link from 'next/link';
 import React, { FC, FormEvent } from 'react';
 import { browser } from '../../../public';
@@ -8,7 +12,11 @@ import styles from './styles.module.scss'
 interface Props {
   className?: string;
   id?: string;
+<<<<<<< HEAD
   src: string | StaticImageData;
+=======
+  src: string ;
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   onClick?: () => void;
   title?: string;
   website?: string;

@@ -19,13 +19,21 @@ const index: FC = () => {
 
       {/* vacancy image */}
       <Col xs={{offset: 2, span: 8}} lg={{offset: 0, span: 3}}>
+<<<<<<< HEAD
       <Image src={profile} className={styles.image} alt='Image' />
+=======
+      <Image src={profile} className={styles.image} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
           <Row className='text-center'>
             <span className='h5'>Amazon Inc.</span>
             <span className='h6 text-secondary'>Marketplace</span>
             <Link href={'https://www.google.com'}>
               <a className={styles.anchor}>
+<<<<<<< HEAD
                 <Image src={browser} alt='Image'/>
+=======
+                <Image src={browser}/>
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
                 <span>Visit website</span>
               </a>
             </Link>
@@ -38,6 +46,7 @@ const index: FC = () => {
         <Col lg={10}>
           <Row className={styles.benefices}>
           <Col lg={4} >
+<<<<<<< HEAD
               <Image src={celebration} alt='Image' />
               <span>Corporate events</span>
             </Col>
@@ -47,6 +56,17 @@ const index: FC = () => {
             </Col>
             <Col lg={4} >
               <Image src={Tag} alt='Image' />
+=======
+              <Image src={celebration} />
+              <span>Corporate events</span>
+            </Col>
+            <Col lg={4} >
+              <Image src={heart} />
+              <span>Health insurance</span>
+            </Col>
+            <Col lg={4} >
+              <Image src={Tag} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
               <span>Employee discounts</span>
             </Col>
           </Row>

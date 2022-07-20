@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import { BtnPrimary, EmploymentType, Heading, InputRange } from 'components';
 import React, { FC, memo, useState } from 'react';
 import { Row } from 'react-bootstrap';
@@ -15,7 +18,11 @@ export type IValue = {
   max: string;
 }
 
+<<<<<<< HEAD
 const index: FC<Props> = ({className, id}) => {
+=======
+const index: FC<Props> = ({children, className, id}) => {
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
   const [value, setValue] = useState<IValue>({min: '18', max: '50'});
 

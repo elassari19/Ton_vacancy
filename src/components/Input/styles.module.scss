@@ -7,7 +7,10 @@
     border-radius: 15px;
     width: 100%;
     label{
+<<<<<<< HEAD
       display: block !important;
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
       width: 100%;
     }
     input{
@@ -32,5 +35,9 @@
 }
 
 .error{
+<<<<<<< HEAD
   border: 1px solid rgba(255, 0, 0, 0.755) !important;
+=======
+  border: 1px solid red !important;
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 }

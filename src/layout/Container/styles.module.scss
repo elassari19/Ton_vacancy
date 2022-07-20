@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .container {
+=======
+.container{
+  flex: 1;
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   place-content: center;
   align-content: center;
 }
@@ -25,8 +30,16 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
+<<<<<<< HEAD
 @media (min-width: 1200px) {
   .xlarge {
     display: none;
   }
 }
+=======
+@media (min-width: 1200px) { 
+  .xlarge {
+    display: none;
+  }
+ }
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5

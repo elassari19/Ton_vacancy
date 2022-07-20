@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import React, { FormEvent, memo, useState } from 'react';
 import { BtnPrimary, Filter, Heading, InfoCard, InputCostum, InputRange, Sort } from '../../components';
 import Head from 'next/head';

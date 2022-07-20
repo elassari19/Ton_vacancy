@@ -21,7 +21,11 @@ interface Props {
 const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type, placeholder, value, defaultValue, onChange, style, onClick}) => {
   return <div className={styles.container + ` ${className}`} id={id}>
 
+<<<<<<< HEAD
     {inIcon && <Image onClick={onClick} src={inIcon} width={size||22} height={size||22} alt='Image' />}
+=======
+    {inIcon && <Image onClick={onClick} src={inIcon} width={size||22} height={size||22} />}
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
     <input 
       name={id} id={id} 
@@ -35,7 +39,11 @@ const index: FC<Props> = ({ children, className, id, inIcon, endIcon, size, type
 
     {children}
 
+<<<<<<< HEAD
     {endIcon && <Image onClick={onClick} src={endIcon} alt='Image' />}
+=======
+    {endIcon && <Image onClick={onClick} src={endIcon} />}
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
   </div>;
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../../styles/Home.module.scss";
 
 .container {
@@ -6,6 +7,15 @@
 }
 
 .header {
+=======
+@import '../../styles/Home.module.scss';
+
+.container {
+  margin: 10px 0;
+}
+
+.header{
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   @include contained(1, flex, row, space-between, center);
 }
 
@@ -24,3 +34,8 @@
 .buttons {
   @include contained(1, flex, row, flex-end, center);
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5

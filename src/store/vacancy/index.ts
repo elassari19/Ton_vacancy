@@ -23,7 +23,11 @@ type Iaction = {
   payload: Ivacancy;
 }
 
+<<<<<<< HEAD
 const vacancyReducer = (state: Ivacancy = initialState, action: Iaction) => {
+=======
+const infoReducer = (state: Ivacancy = initialState, action: Iaction) => {
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   switch (action.type) {
     case PUBLISH_VACANCY:
       return { ...action.payload };
@@ -33,4 +37,8 @@ const vacancyReducer = (state: Ivacancy = initialState, action: Iaction) => {
   }
 }
 
+<<<<<<< HEAD
 export default vacancyReducer;
+=======
+export default infoReducer;
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import React, { FC, memo } from 'react';
 import { GetServerSideProps } from 'next';
 import Image from 'next/image';
@@ -33,7 +36,11 @@ const index: FC<Props> = ({person}) => {
         <Row className={styles.person}>
           {/* profile image */}
           <Col xs={12} md={5} style={{position: 'relative'}}>
+<<<<<<< HEAD
             <Image src={profile} className={styles.Image} width={245} height={245} alt='Image' />
+=======
+            <Image src={profile} className={styles.Image} width={245} height={245} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
             <div className={styles.green} />
           </Col>
           {/* profile title */}

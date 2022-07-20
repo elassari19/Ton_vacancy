@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import React, { FC, memo, useCallback, useState } from 'react';
 // import { GetServerSideProps } from 'next';
 import Image from 'next/image';
@@ -40,11 +43,19 @@ const index: FC<Props> = ({vacancy}) => {
 
           {/* companie image and url */}
         <Col xs={6}  lg={4}>
+<<<<<<< HEAD
           <Image src={profile} className={styles.image} alt='Image' />
           <Row>
             <Link href={'https://www.google.com'}>
               <a className={styles.anchor}>
                 <Image src={browser} alt='Image'/>
+=======
+          <Image src={profile} className={styles.image} />
+          <Row>
+            <Link href={'https://www.google.com'}>
+              <a className={styles.anchor}>
+                <Image src={browser}/>
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
                 <span>Visit website</span>
               </a>
             </Link>

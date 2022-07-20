@@ -1,5 +1,9 @@
 import { Tips } from 'components';
+<<<<<<< HEAD
 import Image, { StaticImageData } from 'next/image';
+=======
+import Image from 'next/image';
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import Link from 'next/link';
 import React, { FC, memo } from 'react';
 import { Col, Row } from 'react-bootstrap';
@@ -33,7 +37,11 @@ const index: FC<Props> = ({ className, id, onClick, desc, link, employees, onMar
             && <Row>
                 <Link href={'https://www.google.com'}>
                 <a className={styles.anchor}>
+<<<<<<< HEAD
                   <Image src={browser} alt='Image'/>
+=======
+                  <Image src={browser}/>
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
                   <span>Visit website</span>
                 </a>
               </Link>

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import { BtnPrimary } from 'components';
 import Image from 'next/image';
 import React, { useRef, FC, useState } from 'react';
@@ -63,7 +66,11 @@ const index: FC<Props> = ({ className, id, onClick, setIsModal, type}) => {
 
 
       <div className={styles.telegram} onClick={handleSubmit}>
+<<<<<<< HEAD
         <Image src={telegram} alt='Image' />
+=======
+        <Image src={telegram} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
         <span>{type != 'sign' ? 'Sign up' : 'Sign'} with telegram</span>
       </div>
 

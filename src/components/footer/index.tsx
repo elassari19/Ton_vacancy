@@ -16,16 +16,28 @@ const index: FC<Props> = ({ className, id}) => {
         <Col sm={{offset: 1, span: 10}} md={7}>
           <Row>
 
+<<<<<<< HEAD
             <Col><Image src={Logo} alt='Image' /></Col>
+=======
+            <Col><Image src={Logo} /></Col>
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
             <Col sm={12} md={4}>
               <p className={styles.title}>Applicant</p>
               <div>
+<<<<<<< HEAD
                  <Image src={vector}  alt='Image'/>
                  <span>To find a job</span>
               </div>
               <div>
                  <Image src={vector}  alt='Image'/>
+=======
+                 <Image src={vector} />
+                 <span>To find a job</span>
+              </div>
+              <div>
+                 <Image src={vector} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
                  <span>Submit your CV</span>
               </div>
             </Col>
@@ -33,11 +45,19 @@ const index: FC<Props> = ({ className, id}) => {
             <Col>
               <p className={styles.title}>Employer</p>
               <div>
+<<<<<<< HEAD
                  <Image src={vector}  alt='Image'/>
                  <span>Add job</span>
               </div>
               <div>
                  <Image src={vector}  alt='Image'/>
+=======
+                 <Image src={vector} />
+                 <span>Add job</span>
+              </div>
+              <div>
+                 <Image src={vector} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
                  <span>Resume search</span>
               </div>
             </Col>
@@ -46,7 +66,11 @@ const index: FC<Props> = ({ className, id}) => {
         </Col>
 
         <Col className={styles.center} style={{paddingTop: 15}} >
+<<<<<<< HEAD
           <Image src={telegram} alt='Image'/>
+=======
+          <Image src={telegram}/>
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
           <span className={styles.telegram}>  Visit Telegram channel</span>
         </Col>
 

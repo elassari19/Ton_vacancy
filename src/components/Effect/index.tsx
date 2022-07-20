@@ -13,7 +13,11 @@ interface Props {
 
 const index: FC<Props> = ({ className, id, rotate, top, left, size, icon}) => {
   return <div id={id} style={{position: 'absolute', top, left, transform: `rotate(${rotate}deg)`}}>
+<<<<<<< HEAD
     <Image src={icon||''} width={size} height={size} alt='Image' />
+=======
+    <Image src={icon||''} width={size} height={size} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   </div>;
 };
 

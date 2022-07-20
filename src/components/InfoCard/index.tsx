@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import { BtnPrimary, Crypto, Heading, Tips, Underemployment, YearsAndTime } from 'components';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -20,7 +23,11 @@ const index: FC<Props> = ({ className, id}) => {
 
       <Row>
         <Col xs={6} className={styles.image}>
+<<<<<<< HEAD
           <Image src={profile} width={130} height={130} alt='Image' />
+=======
+          <Image src={profile} width={130} height={130} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
         </Col>
         <Col xs={6} className={styles.info}>
           <div className={styles.head}>

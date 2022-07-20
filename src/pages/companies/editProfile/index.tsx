@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import React, { FC, FormEvent, memo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { BtnPrimary, ImageProfile, Input, InputCostum } from 'components';
 import { BrandPage } from 'layout';
 import { Col, Row } from 'react-bootstrap';
 //import { InfoState } from 'store/info/constants';
+<<<<<<< HEAD
 import { IBenfits, Iinfo } from 'types';
+=======
+import { Iinfo } from 'types';
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import { celebration, Clock, dollar, gift, heart, profile, Tag } from '../../../../public';
 import TimezoneSelect from 'react-timezone-select';
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -15,13 +22,44 @@ import styles from './styles.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCompanyInfo } from 'store/info/constants';
 import { State } from 'store'
+<<<<<<< HEAD
 import { profileSchema } from 'schema';
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
 interface Props {
   className?: string;
   id?: string;
 }
 
+<<<<<<< HEAD
+=======
+const schema = yup.object({
+  image: yup.string().notRequired(),
+  name: yup.string().required().min(5),
+  category: yup.string().notRequired(),
+  description: yup.string().notRequired(),
+  phone: yup.number().positive().integer(),
+  email: yup.string().email().notRequired(),
+  telegram: yup.string().notRequired(),
+  city: yup.string().notRequired(),
+  events: yup.boolean().notRequired(),
+  insurance: yup.boolean().notRequired(),
+  bonus: yup.boolean().notRequired(),
+  review: yup.boolean().notRequired(),
+  discount: yup.boolean().notRequired(),
+  schedule: yup.boolean().notRequired()
+}).required();
+
+type IBenfits = {
+  title: string;
+  icon: string;
+  benfit: boolean;
+  name: string;
+}
+
+
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 export const InfoState = {
   name: '',
   category: '',
@@ -45,7 +83,11 @@ const index: FC<Props> = ({className, id}) => {
   const dispatch = useDispatch();
 
   // conect yup validation with the react-form-hook
+<<<<<<< HEAD
   const { register, handleSubmit, formState:{ errors } } = useForm<Iinfo>({resolver: yupResolver(profileSchema)});
+=======
+  const { register, handleSubmit, formState:{ errors } } = useForm<Iinfo>({resolver: yupResolver(schema)});
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 
   const store = useSelector( (state:State) => state);
 
@@ -64,8 +106,12 @@ const index: FC<Props> = ({className, id}) => {
   // save the benefits in state
   const handleChange = (ev: FormEvent<HTMLInputElement>) => {
     //@ts-ignore
+<<<<<<< HEAD
     const {name, value} = ev.target
     setValue(prev=>({...prev, [name]: value}));
+=======
+    setValue(prev=>({...prev, [ev?.target.name]: ev?.target.value}));
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
   };
 
   // save the information in store and clear the data from state
@@ -134,6 +180,7 @@ const index: FC<Props> = ({className, id}) => {
                 {title: 'Employee discounts', icon: Tag, benfit: value.benfits.discount, name: 'discount'},
                 {title: 'Flexible schedule', icon: Clock, benfit: value.benfits.schedule, name: 'schedule'}
               ].
+<<<<<<< HEAD
               map((item: IBenfits,idx: number)=>
                 <Col key={idx}>
                   <BtnPrimary
@@ -143,6 +190,17 @@ const index: FC<Props> = ({className, id}) => {
                   />
                 </Col>
               )
+=======
+              map((item: IBenfits,idx: number)=>(
+                <Col key={idx}>
+                  <BtnPrimary
+                    title={item.title} inIcon={item.icon}
+                    white={item.benfit&& false} blueLight={item.benfit&&true}
+                    onClick={()=>handleBenfits(item.name, !item.benfit)}
+                  />
+                </Col>
+              ))
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
             }
 
             </Col>

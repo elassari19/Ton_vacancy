@@ -12,7 +12,11 @@ interface Props {
 const index: FC<Props> = ({ className, id}) => {
   return <Row className={styles.container + ` ${className}`} id={id}>
     <Col xs={12} lg={{offset:1,span: 5}}>
+<<<<<<< HEAD
       <Image src={tip05} alt='Image' />
+=======
+      <Image src={tip05} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
     </Col>
     <Col xs={12} lg={{span: 5}} className={styles.vacancy}>
       <p className='h5'>Vacancies</p>

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
+=======
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { TipsCard, BtnPrimary, Tips } from '../components'
@@ -38,7 +41,11 @@ const index: NextPage = () => {
               <BtnPrimary greenDark title='I am applicant' inIcon={personsWhite} style={{width: '45%', padding: '12px'}} onClick={()=>route.push('/companies')} />
           </TipsCard>
 
+<<<<<<< HEAD
             <Image src={picture1} alt='Image' />
+=======
+            <Image src={picture1} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
         </Section>
 
         {/* How to find really a good job? */}
@@ -54,15 +61,26 @@ const index: NextPage = () => {
 
         {/* images */}
         <Section>
+<<<<<<< HEAD
           <Image src={tip01} alt='Image' />
           <Image src={tip02} alt='Image' />
           <Image src={tip03} alt='Image' />
           <Image src={tip04} alt='Image' />
+=======
+          <Image src={tip01} />
+          <Image src={tip02} />
+          <Image src={tip03} />
+          <Image src={tip04} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
         </Section>
 
         {/* How to find really a good job?  */}
         <Section style={{background: '#0001'}}>
+<<<<<<< HEAD
           <Image src={picture2} alt='Image' />
+=======
+          <Image src={picture2} />
+>>>>>>> f8a607d17099ca218811c66bc43c75a80cbe2df5
           <div>
             <Tips title='TIPS' style={{height: 35, width: 114}} />
             <TipsCard
