@@ -1,0 +1,27 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  border-radius: 0 0 1rem 1rem;
+  padding: auto 1rem;
+  height: 15rem;
+  >div >div{
+    border: 0;
+    >div{
+      border: 1px solid $blueLight;
+      color: #000;
+      height: 2rem default;
+      >div{
+        border: 0;
+      }
+      div{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  >div{
+    height: 8rem;
+    padding: auto 1rem !important;
+    color: $blue;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  @include contained(1, flex, row, space-around, center);
+  max-width: 220px;
+  font-size: .9rem;
+  font-weight: 600;
+  height: 35;
+  border: 1px solid $blueLight;
+  border-radius: 6px;
+  color: $blue;
+}

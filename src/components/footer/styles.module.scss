@@ -1,0 +1,22 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  display: grid;
+  padding: 30px;
+  .title{
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+  }
+  .telegram{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 23px;
+    color: $blueDark;
+  }
+  .center{
+    @include contained(1, flex, row, space-evenly, center);
+    cursor: pointer;
+  }
+}

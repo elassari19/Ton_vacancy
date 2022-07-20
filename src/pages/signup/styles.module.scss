@@ -1,0 +1,27 @@
+@import "../../styles/Home.module.scss";
+
+.container {
+  width: auto;
+}
+.privacy {
+  @include contained(1, flex, row, space-between, flex-start);
+  font-size: 12px;
+  color: #0006;
+  padding: 0.4rem;
+  p {
+    margin: 0;
+  }
+  span {
+    color: $blue;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  input {
+    width: 2rem;
+    height: 1.1rem;
+    margin: 0.3rem 0.7rem 0.3rem;
+  }
+}
+.privacyInput {
+  border: #ff000054 solid 2px;
+}

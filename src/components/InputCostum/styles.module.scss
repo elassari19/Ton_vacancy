@@ -1,0 +1,22 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  padding: 10px;
+  border: 1px solid $blueLight;
+  border-radius: 15px;
+  width: 100%;
+  @include contained(1, flex, row, center, center);
+  input{
+    flex: 1;
+    padding-left: 5px;
+    margin-left: 10px;
+    outline: none;
+    font-size: 1rem;
+    border: none;
+    color: $blue;
+    background-color: inherit;
+    &::placeholder{
+      color: $blueLight;
+    }
+  }
+}
