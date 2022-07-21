@@ -1,0 +1,74 @@
+@import '../../../styles/Home.module.scss';
+
+.container{
+  z-index: 20;
+  margin: 3rem auto;
+  font-size: 1rem;
+  h1{
+    text-align: center;
+  }
+  h5{
+    margin-top: 1.5rem;
+  }
+}
+
+.salary{
+  margin: 2rem auto;
+  div{
+    padding: 0;
+    justify-content: center;
+  }
+  div span{
+    padding: 8px;
+  }
+  #month{
+    border-radius: 2px !important;
+  }
+}
+
+.submit{
+  margin-top: 1rem;
+  background-color: $blue;
+  input{
+    margin: 0;
+    color: #fff;
+  }
+}
+
+.fromto{
+  font-size: 1.1rem;
+  margin: 10px auto;
+  p{
+    margin: 0;
+  }
+  >div{
+    margin: auto 5px;
+  }
+  >div >div {
+    padding-left: .7rem;
+    border-radius: 8px;
+    margin: 5px 0;
+  }
+  input{
+    color: $blue;
+    font-size: 1rem;
+    width: 3rem;
+  }
+}
+.options{
+  >div{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+  }
+  .input{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: .1rem .7rem;
+    border-radius: .3rem;
+    border: 1px solid $blueLight;
+    outline: 0;
+  }
+}

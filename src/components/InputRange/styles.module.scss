@@ -1,0 +1,45 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  margin: 15px 0;
+  .rangeSlider{
+    @include contained(1, flex, row, center, center);
+    margin: 15px 0;
+    display: inline-flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 1px solid $blueLight;
+    border-radius: 2px;
+    input{
+      height: 8px;
+      width: 100%;
+      -webkit-appearance: none;
+      ::-webkit-slider-thumb {
+        background-color: red;
+        color: red;
+      }
+    }
+  }
+  .rangeValue{
+    @include contained(1, flex, row, space-between, center);
+    margin: 15px 0 0;
+    label{
+      color: $gray;
+      div{
+        flex: 1;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid $blueLight;
+        input{
+          font-weight: 600;
+          font-size: 18px;
+          width: 40px;
+          border: 0;
+          outline: 0;
+        }
+      }
+    }
+  }
+}

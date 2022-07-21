@@ -1,0 +1,30 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  margin: 0 0 0px 0;
+  padding: 0 .5rem;
+  span{
+    margin: 0 0 0 5px;
+    font-weight: bold;
+  }
+  >div{
+    >div{
+      @include contained(1, flex, row, flex-start, center);
+      margin: 5px 0;
+      padding: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+
+.anchor{
+  @include contained(1,flex, row, flex-end, center);
+  margin: 10px 0 0 ;
+  span{
+    margin: 0 5px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  color: $blue;
+}

@@ -1,0 +1,25 @@
+@import '../../styles/Home.module.scss';
+
+.container {
+  font-weight: 400;
+}
+
+.xs{
+  font-size: $xsText;
+}
+
+.sm{
+  font-size: $smText;
+}
+
+.md{
+  font-size: $mdText;
+}
+
+.lg{
+  font-size: $lgText;
+}
+
+.xl{
+  font-size: $xlText;
+}

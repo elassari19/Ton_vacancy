@@ -1,0 +1,36 @@
+@import '../../styles/Home.module.scss';
+
+.container{
+  div{
+    padding: 10px;
+    border: 1px solid $blueLight;
+    border-radius: 15px;
+    width: 100%;
+    label{
+      display: block !important;
+      width: 100%;
+    }
+    input{
+      width: 100%;
+      padding-left: 5px;
+      margin-left: 10px;
+      outline: none;
+      font-size: 1rem;
+      border: none;
+      color: $blue;
+      background-color: inherit;
+      &::placeholder{
+        color: $blueLight;
+      }
+    }
+  }
+  span{
+    display: block;
+    text-align: center;
+    color: red;
+  }
+}
+
+.error{
+  border: 1px solid rgba(255, 0, 0, 0.755) !important;
+}
