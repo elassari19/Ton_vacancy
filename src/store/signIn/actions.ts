@@ -30,7 +30,7 @@ export const signIn = (value: ISignin) => async (dispatch: Dispatch) => {
       });
     }
 
-    console.log("res", res);
+    // console.log("res", res);
 
     Cookies.set("vacancy", res.token, { expires: 30 });
 

@@ -24,9 +24,12 @@ const index: React.FC<Props> = () => {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
         className="mySwiper"
+        style={{ paddingBottom: "2rem" }}
       >
         <SwiperSlide>
           <TipsCard

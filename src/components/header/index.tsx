@@ -21,7 +21,7 @@ function index() {
   const router = useRouter();
   const path = router.pathname.split("/")[1];
 
-  const { id, token, error } = useSelector((state: IState) => state.signIn);
+  const { id } = useSelector((state: IState) => state.signIn);
 
   const dispatch = useDispatch();
 
@@ -92,11 +92,11 @@ function index() {
               <Col lg={7} style={{ padding: 0 }}>
                 <BtnPrimary
                   title={id ? "Personal account" : "Log in"}
-                  endIcon={id && personsWhite}
+                  endIcon={id && persons}
                   onClick={() => router.push(id ? `/profile` : "/signin")}
                   blueDark={id ? true : false}
                   white={!id ? true : false}
-                  style={{ width: id ? 185 : 114 }}
+                  style={{ width: id ? 214 : 114 }}
                 />
               </Col>
               <Col sm={5} style={{ padding: 0 }}>
@@ -111,7 +111,7 @@ function index() {
                   }
                   style={{
                     color: id ? color.gray : "#fff",
-                    width: id ? "auto" : 114,
+                    width: id ? 184 : 114,
                   }}
                 />
               </Col>

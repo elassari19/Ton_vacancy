@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import { NextPageContext } from "next";
 
 const index = () => {
-  return (
-    <div>profile</div>
-  )
-}
+  return <div>profile</div>;
+};
 
-export default index
+export function getServerSideProps(ctx: NextPageContext) {
+  // @ts-ignore
+  const { cookie } = ctx.req.headers;
+
+  if (cookie?.split("=")[0] != "vacancy") {
+    return {
+      redirect: {
+        destination: "/signin",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+}
+export default index;

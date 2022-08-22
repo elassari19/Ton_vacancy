@@ -18,6 +18,7 @@ type Istate = {
   token: string;
   isLoading: boolean;
   error: string;
+  permission: string;
 };
 
 type Iaction = {
@@ -31,6 +32,7 @@ const initialState = {
   isLoading: false,
   error: "",
   success: false,
+  permission: "",
 };
 
 const reducer = (state: Istate = initialState, action: Iaction) => {

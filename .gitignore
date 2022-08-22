@@ -2,9 +2,15 @@ node_modules
 
 .next
 
-# src
-# src/store
-# src/types
-# src/pages
-# src/components
+yarn.lock
+
+jest.config.js
+
+next-env.d.ts
+
+tsconfig.json
+
+webpack.config.js
+
+.gitignore
 
