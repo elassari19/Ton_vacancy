@@ -1,0 +1,63 @@
+@import "../../styles/Home.module.scss";
+
+.container {
+  max-height: 500px;
+  max-width: 400px;
+  flex: 1 350px;
+  justify-content: center;
+  padding: 15px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(122, 121, 121, 0.067),
+    -1px -1px 5px rgba(129, 127, 127, 0.067);
+  border-radius: 15px;
+  div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.image {
+  text-align: center;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.info {
+  height: 130px;
+}
+
+.head {
+  padding: 0;
+  > div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.tips {
+  > div {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 3px;
+    padding: 2px 8px;
+    color: #fff;
+    background-color: $green;
+  }
+}
+
+.portfulio {
+  padding: 10px 0;
+  height: 120px;
+  align-items: center;
+  p {
+    color: $gray;
+    font-size: 14px;
+  }
+}
+
+.userContact {
+  @include contained(auto, flex, row, space-around, center);
+  place-self: end;
+}

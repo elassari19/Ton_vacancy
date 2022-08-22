@@ -1,0 +1,73 @@
+@import '../../../../styles/Home.module.scss';
+
+.brand div{
+  position: absolute;
+  left: 0;
+  @include contained(1, flex, row, flex-end, center);
+  width: 100%;
+  height: 200px;
+  background-color: $blueDark;
+  font-size: 6rem;
+  color: #fff3;
+  font-weight: 600;
+  padding-right: 10%;
+}
+
+.container{
+  @include contained(1,flex,row-reverse,flex-start,flex-end);
+  margin-top: 9rem;
+}
+
+
+.anchor{
+  @include contained(1,flex, row, center, center);
+  span{
+    margin: 0 5px;
+    font-weight: 500;
+  }
+  color: $blue;
+}
+
+.image{
+  border: 2px solid $blueLight !important;
+  border-radius: 15px;
+}
+
+.benefices{
+  >div{
+    border: 1px solid $blueLight;
+    border-radius: 6px;
+    @include contained(1,flex, row, center, center);
+    margin: 0 .4rem;
+    padding: 5px 0;
+    span{
+      font-weight: 500;
+      margin-left: 5px;
+    }
+  }
+}
+
+.vacancy{
+  margin-bottom: 2rem;
+  div{
+    padding: 0;
+  }
+  .btn{
+    @include contained(1,flex, row, center, flex-end)
+  }
+  >:last-child{
+    margin-top: 1rem;
+  }
+}
+
+.details{
+  >span{
+    display: inline-block;
+    margin: 1rem 0 ;
+  }
+  >div{
+    justify-content: start ;
+    font-weight: 400;
+  }
+}
+

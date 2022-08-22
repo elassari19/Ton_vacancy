@@ -1,0 +1,9 @@
+@import '../../styles/Home.module.scss';
+
+.forgot{
+  @include contained(1, flex, row, space-between, center);
+  padding: 0 1rem;
+  a{
+    color: $blue;
+  }
+}

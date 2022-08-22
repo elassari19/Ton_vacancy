@@ -1,0 +1,31 @@
+@import "../../styles/Home.module.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafcff75;
+  z-index: 2;
+  @include contained(1, flex, row, center, center);
+}
+
+.images {
+  @include contained(1, flex, row, space-between, flex-start);
+  :last-child {
+    cursor: pointer;
+  }
+}
+.text {
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.7rem auto;
+  }
+  span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #0008;
+  }
+}

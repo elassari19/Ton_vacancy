@@ -1,0 +1,23 @@
+@import "../../styles/Home.module.scss";
+
+.container {
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+  cursor: pointer;
+  height: auto;
+  padding: 0 15px;
+  z-index: 5;
+  font-size: 0.9rem;
+  background-color: #fff;
+  > div {
+    padding: 0.5rem;
+  }
+}
+
+.drop {
+  transition: opacity 0.3s;
+}
+
+.drop.out {
+  transition: opacity 0;
+}

@@ -1,0 +1,26 @@
+@import "../../styles/Home.module.scss";
+
+.container {
+  margin: 10px 0;
+  flex-wrap: nowrap;
+}
+
+.header {
+  @include contained(1, flex, row, space-between, center);
+}
+
+.small {
+  padding: 10px 0;
+}
+
+.start {
+  @include contained(1, flex, row, flex-start, center);
+}
+
+.alignCenter {
+  @include contained(1, flex, row, space-between, center);
+}
+
+.buttons {
+  @include contained(1, flex, row, flex-end, center);
+}

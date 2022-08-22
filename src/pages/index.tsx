@@ -1,0 +1,82 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import type { NextPage } from "next";
+import Head from "next/head";
+import { TipsCard, Tips } from "../components";
+import { Section, Swiper } from "../layout";
+import { picture1, tip01, tip02, tip03, tip04, picture2 } from "../../public";
+import styles from "../styles/Home.module.scss";
+import Image from "next/image";
+import { Col } from "react-bootstrap";
+import { memo } from "react";
+
+const index: NextPage = () => {
+  return (
+    <div className={styles.container}>
+      <Head>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="/assets/images/favicon.svg"
+        />
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+        <title>TON_vacancy</title>
+        <meta
+          name="description"
+          content="TON work allows you to find the most effective and top employees from all over the world"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="../../public/logo.png"
+        />
+      </Head>
+
+      <main className={styles.main}>
+        {/* Professional applicants in various fields */}
+        <Section>
+          <Swiper />
+
+          <Image src={picture1} alt="Image" />
+        </Section>
+
+        {/* How to find really a good job? */}
+        <Col md={6} sm={12}>
+          <Tips title="TIPS" style={{ height: 35, width: 114 }} />
+          <TipsCard
+            tag="h2"
+            size="md"
+            title="How to find really a good job? "
+            content="TON work allows you to find the most effective and top employees from all over the world"
+          />
+        </Col>
+
+        {/* images */}
+        <Section>
+          <Image src={tip01} alt="Image" />
+          <Image src={tip02} alt="Image" />
+          <Image src={tip03} alt="Image" />
+          <Image src={tip04} alt="Image" />
+        </Section>
+
+        {/* How to find really a good job?  */}
+        <Section style={{ background: "#0001" }}>
+          <Image src={picture2} alt="Image" />
+          <div>
+            <Tips title="TIPS" style={{ height: 35, width: 114 }} />
+            <TipsCard
+              tag="h2"
+              size="md"
+              title="How to find really a good job?"
+              content="Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied.
+              <br/>
+              Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do."
+            />
+          </div>
+        </Section>
+      </main>
+    </div>
+  );
+};
+
+export default memo(index);
