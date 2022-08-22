@@ -1,4 +1,4 @@
-const vacancyOptions = [
+export const vacancyOptions = [
   "Development & IT",
   "Design & Creative",
   "Sales & Marketing",
@@ -8,5 +8,3 @@ const vacancyOptions = [
   "Engineering & Architecture",
   "Legal",
 ];
-
-export { vacancyOptions };

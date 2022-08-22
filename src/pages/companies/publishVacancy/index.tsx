@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IState } from "store";
 import { Ivacancy } from "types";
 import { vacancyCreate } from "store/vacancy";
-import { vacancyOptions } from "./options";
+import { vacancyOptions } from "../../../constants/options";
 import { GetServerSideProps } from "next";
 import axios from "axios";
 
